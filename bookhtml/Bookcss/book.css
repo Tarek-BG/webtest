@@ -118,7 +118,7 @@ body {
 
 body {
   font-family: "Indie Flower", cursive;
-  background-color: radial-gradient(white, blue, white);
+  background-image: radial-gradient(white, blue, white);
   color: #555;
   text-align: center;
   padding: 4em 0;
