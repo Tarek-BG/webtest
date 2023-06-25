@@ -1,1 +1,9 @@
-
+<script>
+		var config = {
+			apiKey: "AIzaSyDft5jJVpS3OYjtAe2jXqb8tdx2OAjl9uY",
+			authDomain: "loco-f1182.firebaseapp.com",
+			databaseURL: "https://loco-f1182.firebaseio.com",
+			projectId: "loco-f1182",
+			storageBucket: "loco-f1182.appspot.com",
+			messagingSenderId: "907665553764"
+		};
