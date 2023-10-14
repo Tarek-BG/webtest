@@ -4,13 +4,26 @@
   <cdCar>
     <title>Empire Burlesque</title>
     <artist>Bob Dylan</artist>
-    <Manufacturer>BMW</Manufacturer>
-    <Model>550i xDrive Gran Turismo</Model>
+		<Manufacturer>BMW</Manufacturer>
+		<Model>550i xDrive Gran Turismo</Model>
+		<Fuel>Gas</Fuel>
+		<Cylinder>8</Cylinder>
+		<Horsepower>448</Horsepower>
+		<YearFrom>2013</YearFrom>
+		<YearTill>2014</YearTill>
+		<Source>US</Source>
+		<Series>5</Series>
   </cdCar>
   <cdCar>
     <title>Hide your heart</title>
     <artist>Bonnie Tyler</artist>
-    <Manufacturer>Audi</Manufacturer>
-    <Model>A4 AVANT</Model>
+		<Manufacturer>Audi</Manufacturer>
+		<Model>A4 AVANT</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>170</Horsepower>
+		<YearFrom>2001</YearFrom>
+		<YearTill>2001</YearTill>
+		<Source>US</Source>
+		<Series>A4</Series>
   </cdCar>
 </catalogCars>
