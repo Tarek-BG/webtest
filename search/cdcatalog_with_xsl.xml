@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
-<cd>
-  <catalog>
+<catalog>
+  <cd>
     <title>Empire Burlesque</title>
     <artist>Bob Dylan</artist>
-  </catalog>
-  <catalog>
+  </cd>
+  <cd>
     <title>Hide your heart</title>
     <artist>Bonnie Tyler</artist>
-  </catalog>
-</cd>
+  </cd>
+</catalog>
