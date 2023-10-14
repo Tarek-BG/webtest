@@ -2,19 +2,11 @@
 <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
 <cars>
 	<Car>
-		<Manufacturer>Volkswagen</Manufacturer>
-		<Model>Golf V Plus</Model>
-		<Fuel>Gas</Fuel>
-		<Horsepower>100</Horsepower>
-		<Source>EU</Source>
-		<Series>Golf</Series>
+    <title>Empire Burlesque</title>
+    <artist>Bob Dylan</artist>
 	</Car>
 	<Car>
-		<Manufacturer>Volkswagen</Manufacturer>
-		<Model>Golf V Plus FSI</Model>
-		<Fuel>Gas</Fuel>
-		<Horsepower>115</Horsepower>
-		<Source>EU</Source>
-		<Series>Golf</Series>
+    <title>Hide your heart</title>
+    <artist>Bonnie Tyler</artist>
 	</Car>
 </cars>
