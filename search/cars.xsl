@@ -2,25 +2,20 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/xsl/Transform">
 <xsl:template match="/">
 <html>
-<head>
-	<meta charset="utf-8" />
-	<title>My Plants</title>
-</head>
 <body>
   <h1>Question 1</h1>
   <table border="1">
-	<tr>
-	  <th>Manufacturer</th>
-	  <th>YearFrom</th>
-	</tr>
-	<xsl:for-each select="Cars/Car">
-	  <tr>
-		  <td><xsl:value-of select="Manufacturer"/></td>
-		  <td><xsl:value-of select="YearFrom"/></td>
-	  </tr>                
-	</xsl:for-each>
+    <tr bgcolor="#9acd32">
+      <th style="text-align:left">Title</th>
+      <th style="text-align:left">Artist</th>
+    </tr>
+    <xsl:for-each select="catalog/cd">
+    <tr>
+      <td><xsl:value-of select="title"/></td>
+      <td><xsl:value-of select="artist"/></td>
+    </tr>
+    </xsl:for-each>
   </table>
-  
 </body>
 </html>
 </xsl:template>
