@@ -4,9 +4,13 @@
   <cd>
     <title>Empire Burlesque</title>
     <artist>Bob Dylan</artist>
+    <Manufacturer>BMW</Manufacturer>
+		<Model>550i xDrive Gran Turismo</Model>
   </cd>
   <cd>
     <title>Hide your heart</title>
     <artist>Bonnie Tyler</artist>
+    <Manufacturer>Audi</Manufacturer>
+		<Model>A4 AVANT</Model>
   </cd>
 </catalog>
