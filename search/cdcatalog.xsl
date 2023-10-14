@@ -6,10 +6,10 @@
   <h2>My Cars Collection</h2>
   <table border="1">
     <tr bgcolor="#9acd32">
-      <th style="text-align:left">Title</th>
-      <th style="text-align:left">Artist</th>
+      <th style="text-align:left">Manufacturer</th>
+      <th style="text-align:left">Model</th>
     </tr>
-    <xsl:for-each select="catalogCars/cdCar">
+    <xsl:for-each select="catalogCars/Car">
     <tr>
       <td><xsl:value-of select="Manufacturer"/></td>
       <td><xsl:value-of select="Model"/></td>
