@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
 <cars>
-	<Car>
+  <Car>
     <title>Empire Burlesque</title>
     <artist>Bob Dylan</artist>
-	</Car>
-	<Car>
+  </Car>
+  <Car>
     <title>Hide your heart</title>
     <artist>Bonnie Tyler</artist>
-	</Car>
+  </Car>
 </cars>
