@@ -6,10 +6,10 @@
   <h1>Question 1</h1>
   <table border="1">
     <tr bgcolor="#9acd32">
-      <th style="text-align:left">Title</th>
-      <th style="text-align:left">Artist</th>
+      <th style="text-align:left">Manufacturer</th>
+      <th style="text-align:left">Model</th>
     </tr>
-    <xsl:for-each select="catalog/cd">
+    <xsl:for-each select="cars/car">
     <tr>
       <td><xsl:value-of select="Manufacturer"/></td>
       <td><xsl:value-of select="Model"/></td>
