@@ -3,7 +3,7 @@
 <xsl:template match="/">
 <html> 
 <body>
-  <h2>My 02Cars Collection</h2>
+  <h2>My Cars Collection</h2>
   <table border="1">
     <tr bgcolor="#9acd32">
       <th style="text-align:left">Title</th>
