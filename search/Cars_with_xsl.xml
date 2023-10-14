@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="cars.xsl"?>
-<Cars>
-	<Car>
-		<Manufacturer>BMW</Manufacturer>
-		<Model>550i xDrive Gran Turismo</Model>
-		<Fuel>Gas</Fuel>
-		<Cylinder>8</Cylinder>
-		<Horsepower>448</Horsepower>
-		<YearFrom>2013</YearFrom>
-		<YearTill>2014</YearTill>
-		<Source>US</Source>
-		<Series>5</Series>
-	</Car>
-	<Car>
-		<Manufacturer>BMW</Manufacturer>
-		<Model>550i xDrive GranTurismo</Model>
-		<Fuel>Gas</Fuel>
-		<Cylinder>8</Cylinder>
-		<Horsepower>400</Horsepower>
-		<YearFrom>2010</YearFrom>
-		<YearTill>2012</YearTill>
-		<Source>US</Source>
-		<Series>5</Series>
-	</Car>
-</Cars>
+<catalog>
+  <cd>
+    <title>Empire Burlesque</title>
+    <artist>Bob Dylan</artist>
+    <country>USA</country>
+    <company>Columbia</company>
+    <price>10.90</price>
+    <year>1985</year>
+  </cd>
+  <cd>
+    <title>Hide your heart</title>
+    <artist>Bonnie Tyler</artist>
+    <country>UK</country>
+    <company>CBS Records</company>
+    <price>9.90</price>
+    <year>1988</year>
+  </cd>
