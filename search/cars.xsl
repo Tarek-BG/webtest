@@ -13,7 +13,7 @@
 	  <th>Manufacturer</th>
 	  <th>YearFrom</th>
 	</tr>
-	<xsl:for-each select="CarsDB/Car">
+	<xsl:for-each select="Cars/Car">
 	  <tr>
 		  <td><xsl:value-of select="Manufacturer"/></td>
 		  <td><xsl:value-of select="YearFrom"/></td>
