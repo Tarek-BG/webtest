@@ -11,8 +11,8 @@
     </tr>
     <xsl:for-each select="/cars/car">
     <tr>
-      <td><xsl:value-of select="Manufacturer"/></td>
-      <td><xsl:value-of select="Model"/></td>
+      <td><xsl:value-of select="title"/></td>
+      <td><xsl:value-of select="artist"/></td>
     </tr>
     </xsl:for-each>
   </table>
