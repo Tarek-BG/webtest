@@ -3,13 +3,13 @@
 <xsl:template match="/">
 <html> 
 <body>
-  <h2>My Cars Collection</h2>
+  <h2>My 2Cars Collection</h2>
   <table border="1">
     <tr bgcolor="#9acd32">
       <th style="text-align:left">Title</th>
       <th style="text-align:left">Artist</th>
     </tr>
-    <xsl:for-each select="/cars/car">
+    <xsl:for-each select="cars/car">
     <tr>
       <td><xsl:value-of select="title"/></td>
       <td><xsl:value-of select="artist"/></td>
