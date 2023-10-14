@@ -9,7 +9,7 @@
       <th style="text-align:left">Title</th>
       <th style="text-align:left">Artist</th>
     </tr>
-    <xsl:for-each select="catalog/cd">
+    <xsl:for-each select="catalogCars/cdCar">
     <tr>
       <td><xsl:value-of select="Manufacturer"/></td>
       <td><xsl:value-of select="Model"/></td>
