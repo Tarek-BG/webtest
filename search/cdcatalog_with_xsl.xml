@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
-<catalog>
-  <cd>
-    <title>Empire Burlesque</title>
-    <artist>Bob Dylan</artist>
-    <country>USA</country>
-    <company>Columbia</company>
-    <price>10.90</price>
-    <year>1985</year>
-  </cd>
-</catalog>
+<cars>
+	<Car>
+		<Manufacturer>Volkswagen</Manufacturer>
+		<Model>Golf V Plus</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>100</Horsepower>
+		<Source>EU</Source>
+		<Series>Golf</Series>
+	</Car>
+	<Car>
+		<Manufacturer>Volkswagen</Manufacturer>
+		<Model>Golf V Plus FSI</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>115</Horsepower>
+		<Source>EU</Source>
+		<Series>Golf</Series>
+	</Car>
+</cars>
