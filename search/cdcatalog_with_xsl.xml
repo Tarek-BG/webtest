@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
 <catalogCars>
-  <cdCar>
+  <Car>
     <title>Empire Burlesque</title>
     <artist>Bob Dylan</artist>
 		<Manufacturer>BMW</Manufacturer>
@@ -13,8 +13,8 @@
 		<YearTill>2014</YearTill>
 		<Source>US</Source>
 		<Series>5</Series>
-  </cdCar>
-  <cdCar>
+  </Car>
+  <Car>
     <title>Hide your heart</title>
     <artist>Bonnie Tyler</artist>
 		<Manufacturer>Audi</Manufacturer>
@@ -25,5 +25,5 @@
 		<YearTill>2001</YearTill>
 		<Source>US</Source>
 		<Series>A4</Series>
-  </cdCar>
+  </Car>
 </catalogCars>
