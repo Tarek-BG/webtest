@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="carsX.xsl"?>
-<CarsDB>
+<?xml-stylesheet type="text/xsl" href="cars.xsl"?>
+<Cars>
 	<Car>
 		<Manufacturer>BMW</Manufacturer>
 		<Model>550i xDrive Gran Turismo</Model>
@@ -55830,4 +55830,4 @@
 		<Source>EU</Source>
 		<Series>Golf</Series>
 	</Car>
-</CarsDB>
+</Cars>
