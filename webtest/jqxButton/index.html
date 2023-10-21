@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Button Sample1</title>
+    <link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
+    <meta name="keywords" content="jQuery, Button, Toggle Button, Repeat Button, Link Button, Help Documentation" /> 
+    <script type="text/javascript" src="../../scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxbuttons.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2FX5PV9DNT"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-2FX5PV9DNT');</script></head>
+<body class='default'>
+    <div id='content'>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Create Push Button.
+                $("#jqxButton").jqxButton({ width: '150', height: '25'});
+                // Create Submit Button.
+                $("#jqxSubmitButton").jqxButton({ width: '150', height: '25'});
+                // Create Disabled Button
+                $("#jqxDisabledButton").jqxButton({ disabled: true, width: '150', height: '25'});
+                // Subscribe to Click events.
+                $("#jqxButton").on('click', function () {
+                    alert('Button Clicked');
+                });
+                $("#jqxSubmitButton").on('click', function () {
+                    alert('Submit Button Clicked');
+                });
+            });
+        </script>
+        <div style='width: 150px;' id='jqxWidget'>
+            <div>
+                <input type="button" value="Button" id='jqxButton' />
+            </div>
+            <div>
+                <input style='margin-top: 20px;' type="submit" value="Submit" id='jqxSubmitButton' />
+            </div>
+            <div>
+                <input style='margin-top: 20px;' type="button" value="Disabled" id='jqxDisabledButton' />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
