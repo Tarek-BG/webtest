@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Cars>
   <Car>
-    <title>Empire Burlesque</title>
-    <artist>Bob Dylan</artist>
 		<Manufacturer>BMW</Manufacturer>
 		<Model>550i xDrive Gran Turismo</Model>
 		<Fuel>Gas</Fuel>
@@ -14,8 +12,6 @@
 		<Series>5</Series>
   </Car>
   <Car>
-    <title>Hide your heart</title>
-    <artist>Bonnie Tyler</artist>
 		<Manufacturer>Audi</Manufacturer>
 		<Model>A4 AVANT</Model>
 		<Fuel>Gas</Fuel>
