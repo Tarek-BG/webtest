@@ -30,9 +30,9 @@
 	<script>
 
 	$(function () {
-			jQuery('#cars').jqGrid({
-			url: "cars",
-			datatype: 'xml',
+			jQuery("#Qcars").jqGrid({
+			url: 'cars.xml',
+			datatype: "xml",
 			colNames:["Manufacturer","Model","Fuel", "Cylinder","Horsepower", "YearFrom", "Source"],
 			colModel:[
 				{name:"Manufacturer",index:'Manufacturer', width:50, align:"right"},
@@ -53,7 +53,7 @@
 			xmlReader: {
 				root : "cars",
 				row: "car",
-				repeatitems: true
+				repeatitems: false
 			}
 			});
 
