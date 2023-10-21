@@ -2,6 +2,7 @@
 <Cars>
   <Car>
 		<Manufacturer>BMW</Manufacturer>
+		<date>"2007-10-01"</date>
 		<Model>550i xDrive Gran Turismo</Model>
 		<Fuel>Gas</Fuel>
 		<Cylinder>8</Cylinder>
@@ -13,6 +14,7 @@
   </Car>
   <Car>
 		<Manufacturer>Audi</Manufacturer>
+		<date>"2007-10-02"</date>
 		<Model>A4 AVANT</Model>
 		<Fuel>Gas</Fuel>
 		<Horsepower>170</Horsepower>

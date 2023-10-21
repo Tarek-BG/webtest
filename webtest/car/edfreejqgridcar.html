@@ -62,28 +62,27 @@
 				setTimeout(function () {
 					initDateEdit(elem);
 				}, 100);
-	/*jslint browser: true 
-			};*/
-
+			};
+*/
 		$grid.jqGrid({
 			url: 'cars.xml',
 			datatype: 'xml',
 			/*data: mydata,*/
-			colNames: ["", "Manufacturer", "Date", "Cylinder", "Horsepower", "YearFrom", "Closed", "Shipped via", "Source"],
+			colNames: ["", "Manufacturer", "Date", "Cylinder", "Horsepower", "YearFrom", "Closed", "Series", "Source"],
 			colModel: [
 				{ name: "act", template: "actions" },
 				{ name: "Manufacturer", align: "center", width: 92, editrules: {required: true} },
-				/*{ name: "invdate", width: 72, align: "center", sorttype: "date", frozen: true,
+				{ name: "date", width: 72, align: "center", sorttype: "date", frozen: true,
 					formatter: "date", formatoptions: { newformat: "d-M-Y", reformatAfterEdit: true }, datefmt: "d-M-Y",
 					editoptions: { dataInit: initDateEdit },
-					searchoptions: { sopt: ["eq", "ne", "lt", "le", "gt", "ge"], dataInit: initDateSearch } },*/
+					searchoptions: { sopt: ["eq", "ne", "lt", "le", "gt", "ge"], dataInit: initDateSearch } },
 				{ name: "Cylinder", width: 56, template: "number" },
 				{ name: "Horsepower", width: 35, template: "number", autoResizableMinColSize: 40 },
 				{ name: "YearFrom", width: 43, template: "number" },
 				{ name: "closed", width: 49, template: "booleanCheckboxFa" },
-				/*{ name: "ship_via", width: 76, align: "center", formatter: "select",
+				{ name: "Series", width: 76, align: "center", formatter: "select",
 					edittype: "select", editoptions: { value: "FE:FedEx;TN:TNT;IN:Intim", defaultValue: "IN" },
-					stype: "select", searchoptions: { sopt: ["eq", "ne"], value: ":Any;FE:FedEx;TN:TNT;IN:IN" } },*/
+					stype: "select", searchoptions: { sopt: ["eq", "ne"], value: ":Any;FE:FedEx;TN:TNT;IN:IN" } },
 				{ name: "Source", width: 43, edittype: "textarea", sortable: false }
 			],
 			cmTemplate: { editable: true, autoResizable: true },
