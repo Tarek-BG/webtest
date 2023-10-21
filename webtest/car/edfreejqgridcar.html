@@ -47,6 +47,7 @@
 				{ id: "110", invdate: "2007-09-08", name: "test11", note: "note11", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" },
 				{ id: "120", invdate: "2007-09-10", name: "test12", note: "note12", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" }
 			],
+*/			
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
@@ -63,11 +64,11 @@
 					initDateEdit(elem);
 				}, 100);
 			};
-*/
+
 		$grid.jqGrid({
 			url: 'cars.xml',
 			datatype: 'xml',
-			/*data: mydata,*/
+			data: cars,
 			colNames: ["", "Manufacturer", "Date", "Cylinder", "Horsepower", "YearFrom", "Closed", "Series", "Source"],
 			colModel: [
 				{ name: "act", template: "actions" },
