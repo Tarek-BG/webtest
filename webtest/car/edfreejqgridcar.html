@@ -47,7 +47,7 @@
 				{ id: "110", invdate: "2007-09-08", name: "test11", note: "note11", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" },
 				{ id: "120", invdate: "2007-09-10", name: "test12", note: "note12", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" }
 			],
-*/			
+			
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
@@ -64,8 +64,41 @@
 					initDateEdit(elem);
 				}, 100);
 			};
+*/
 
-		$grid.jqGrid({
+
+jQuery('#cars').jqGrid({
+  url: 'cars.xml',
+  datatype: 'xml',
+  colNames:['Manufacturer','Model', 'Fuel', 'Cylinder','Horsepower', 'YearFrom', 'Source'],
+  colModel:[
+      {name:'Manufacturer',index:'Manufacturer', width:90, align:"right"},
+      {name:'Model',index:'Model', width:90, align:"right"},
+      {name:'Fuel',index:'Fuel', width:90, align:"right"},
+      {name:'Cylinder',index:'Cylinder', width:90, align:"right"},
+      {name:'Horsepower',index:'Horsepower', width:90, align:"right"},
+      {name:'YearFrom',index:'YearFrom', width:90, align:"right"},
+      {name:'Source',index:'Source', width:90, align:"right"},
+  ],
+  pager : '#pager',
+  rowNum:10,
+  scrollOffset:0,
+  height: 'auto',
+  autowidth:true,
+  viewrecords: true,
+  gridview: true,
+  xmlReader: {
+      root : "list",
+      row: "com\\.abc\\.db\\.ConfigInfo",
+      repeatitems: false
+  }
+});
+
+
+
+
+/*
+$grid.jqGrid({
 			url: 'cars.xml',
 			datatype: 'xml',
 			data: cars,
@@ -92,6 +125,7 @@
 			autoResizing: { compact: true },
 			rowList: [5, 10, 20, "10000:All"],
 			viewrecords: true,
+			
 			pager: true,
 			toppager: true,
 			rownumbers: true,
@@ -106,14 +140,14 @@
 		}).jqGrid("navGrid", { view: true })
 		.jqGrid("inlineNav")
 		.jqGrid("filterToolbar")
-		.jqGrid("gridResize");
+		.jqGrid("gridResize");*/
 	});
 	//]]>
 	</script>
 </head>
 <body>
     <h2>Car FreejqGrid</h2>
-    <a href="https://stackoverflow.com/questions/6426670/how-to-map-an-xml-in-jqgrid">change3 data?</a><br>
+    <a href="https://stackoverflow.com/questions/6426670/how-to-map-an-xml-in-jqgrid">change03 data?</a><br>
 
 	<div id="outerDiv" style="margin:5px;">
 		<table id="list"></table>
