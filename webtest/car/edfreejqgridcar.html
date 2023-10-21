@@ -31,7 +31,7 @@
 	//<![CDATA[
 	/*global $ */
 	/*jslint browser: true */
-	$(function () {
+/*	$(function () {
 		"use strict";
 		var mydata = [
 				{ id: "10",  invdate: "2007-10-01", name: "test",   note: "note",   amount: "", tax: "", closed: true,  ship_via: "TN", total: "" },
@@ -62,9 +62,11 @@
 				setTimeout(function () {
 					initDateEdit(elem);
 				}, 100);
+	/*jslint browser: true */
 			};
 
 		$grid.jqGrid({
+			url: 'cdcatalog_with_xsl.xml',
 			data: mydata,
 			colNames: ["", "Client", "Date", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
 			colModel: [
