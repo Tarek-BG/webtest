@@ -35,13 +35,13 @@
 			datatype: 'xml',
 			colNames:["Manufacturer","Model","Fuel", "Cylinder","Horsepower", "YearFrom", "Source"],
 			colModel:[
-				{name:"Manufacturer",index:'Manufacturer', width:90, align:"right"},
-				{name:"Model",index:'Model', width:90, align:"right"},
-				{name:"Fuel",index:'Fuel', width:90, align:"right"},
-				{name:"Cylinder",index:'Cylinder', width:90, align:"right"},
-				{name:"Horsepower",index:'Horsepower', width:90, align:"right"},
-				{name:"YearFrom",index:'YearFrom', width:90, align:"right"},
-				{name:"Source",index:'Source', width:90, align:"right"},
+				{name:"Manufacturer",index:'Manufacturer', width:50, align:"right"},
+				{name:"Model",index:'Model', width:50, align:"right"},
+				{name:"Fuel",index:'Fuel', width:50, align:"right"},
+				{name:"Cylinder",index:'Cylinder', width:50, align:"right"},
+				{name:"Horsepower",index:'Horsepower', width:50, align:"right"},
+				{name:"YearFrom",index:'YearFrom', width:50, align:"right"},
+				{name:"Source",index:'Source', width:50, align:"right"},
 			],
 
 			rowNum:10,
@@ -53,7 +53,7 @@
 			xmlReader: {
 				root : "cars",
 				row: "car",
-				repeatitems: false
+				repeatitems: true
 			}
 			});
 
