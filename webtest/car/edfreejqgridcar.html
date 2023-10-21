@@ -31,7 +31,7 @@
 
 	$(function () {
 			jQuery('#cars').jqGrid({
-			url: "cars.xml",
+			url: "https://tarek-bg.github.io/web/webtest/car/cars.xml",
 			datatype: 'xml',
 			colNames:["Manufacturer","Model","Fuel", "Cylinder","Horsepower", "YearFrom", "Source"],
 			colModel:[
@@ -43,7 +43,7 @@
 				{name:"YearFrom",index:'YearFrom', width:90, align:"right"},
 				{name:"Source",index:'Source', width:90, align:"right"},
 			],
-			pager : '#pager',
+
 			rowNum:10,
 			scrollOffset:0,
 			height: 'auto',
@@ -52,7 +52,7 @@
 			gridview: true,
 			xmlReader: {
 				root : "cars",
-				row: "com\\.abc\\.db\\.ConfigInfo",
+				row: "car",
 				repeatitems: false
 			}
 			});
