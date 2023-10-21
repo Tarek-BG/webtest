@@ -4,7 +4,7 @@
 <html> 
 <body>
   <h2>My CD Collection</h2>
-  <a href="url">https://tarek-bg.github.io/web/bookhtml/book.html</a>
+  <a href="https://tarek-bg.github.io/web/bookhtml/book.html">https://tarek-bg.github.io/web/bookhtml/book.html</a>
   <table border="1">
     <tr bgcolor="#9acd32">
       <th style="text-align:left">Title</th>
