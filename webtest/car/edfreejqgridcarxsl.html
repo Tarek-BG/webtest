@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>http://stackoverflow.com/q/27617764/315935</title>
+	<meta name="author" content="Oleg Kiriljuk">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://rawgit.com/free-jqgrid/jqGrid/master/css/ui.jqgrid.css">
+	<style>
+		html, body { font-size: 75%; }
+		.ui-datepicker select.ui-datepicker-year,
+		.ui-datepicker select.ui-datepicker-month {
+			color: black
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.9.2/js/i18n/grid.locale-en.js"></script>-->
+	<script>
+		$.jgrid = $.jgrid || {};
+		$.jgrid.no_legacy_api = true;
+		$.jgrid.useJSON = true;
+	</script>
+	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
+	<script>
+
+	$(function () {
+			jQuery("#Qcars").jqGrid({
+			url: 'webtest/car/cdcatalog_with_xsl.xml',
+			datatype: "xml",
+			colNames:["Manufacturer","Model"],
+			colModel:[
+				{name:"Manufacturer",index:'Manufacturer', width:50, align:"right"},
+				{name:"Model",index:'Model', width:50, align:"right"},
+
+			],
+
+			rowNum:10,
+			scrollOffset:0,
+			height: 'auto',
+			autowidth:true,
+			viewrecords: true,
+			gridview: true,
+			xmlReader: {
+				root : "cars",
+				row: "car",
+				repeatitems: false
+			}
+			});
+
+
+
+	});
+
+	</script>
+</head>
+<body>
+    <h1> xslCar* FreejqGrid</h1>
+    <a href="https://thequickadvisor.com/how-to-get-a-jqgrid-selected-row-cells-value/#How_to_get_a_jqgrid_selected_row_cells_value">changevideo data?</a><br>
+<br>
+	<a href="https://youtu.be/8okxv1cVKzI">video data?</a><br>
+
+	<div id="outerDiv" style="margin:5px;">
+		<table id="Qcars"></table>
+	</div>
+</body>
+</html>
