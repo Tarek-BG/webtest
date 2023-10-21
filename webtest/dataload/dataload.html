@@ -48,7 +48,7 @@
                 viewrecords: true,
                 sortorder: "desc",
                 caption: "Load Data - XML"
-            }).navGrid('#jqGridPager', { edit: false, add: false, del: false });
+            }).navGrid('#jqGridPager', { edit: true, add: true, del: false });
 			$("#export").on("click", function(){
 				$("#jqGrid").jqGrid("exportToHtml",{
 					includeLabels : true,
