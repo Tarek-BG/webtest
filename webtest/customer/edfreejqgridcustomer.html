@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>http://stackoverflow.com/q/27617764/315935</title>
+	<meta name="author" content="Oleg Kiriljuk">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://rawgit.com/free-jqgrid/jqGrid/master/css/ui.jqgrid.css">
+	<style>
+		html, body { font-size: 75%; }
+		.ui-datepicker select.ui-datepicker-year,
+		.ui-datepicker select.ui-datepicker-month {
+			color: black
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.9.2/js/i18n/grid.locale-en.js"></script>-->
+	<script>
+		$.jgrid = $.jgrid || {};
+		$.jgrid.no_legacy_api = true;
+		$.jgrid.useJSON = true;
+	</script>
+	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
+	<script>
+	//<![CDATA[
+	$(function () {
+			jQuery("#Qcust").jqGrid({
+			url: 'CustomerOrders.xml',
+			datatype: "xml",
+			colNames:["Customer","CompanyName"],
+			colModel:[
+				{name:"Customer",index:'Customer', width:50, align:"right"},
+				{name:"CompanyName",index:'Model', width:50, align:"right"},
+
+			],
+
+			cmTemplate: { editable: true, autoResizable: true },
+			iconSet: "fontAwesome",
+			rowNum: 10,
+			autoResizing: { compact: true },
+			rowList: [5, 10, 20, "10000:All"],
+			viewrecords: true,
+			pager: true,
+			toppager: true,
+			rownumbers: true,
+			sortname: "invdate",
+			sortorder: "desc",
+			subGrid: true,
+			subGridRowExpanded: function (subgridDivId, rowId) {
+				$("#" + $.jgrid.jqID(subgridDivId)).html("<em>simple subgrid data for the row with id=" + rowId + "</em>");
+			},
+			inlineEditing: { keys: true },CompanyName
+			caption: "Demonstration of new navGrid. Try to resize the grid"
+		}).jqGrid("navGrid", { view: true })
+		.jqGrid("inlineNav")
+		.jqGrid("filterToolbar")
+		.jqGrid("gridResize");
+	});
+	//]]>
+	</script>
+</head>
+<body>
+    <h1> xslCar** FreejqGrid</h1>
+    <a href="https://thequickadvisor.com/how-to-get-a-jqgrid-selected-row-cells-value/#How_to_get_a_jqgrid_selected_row_cells_value">changevideo data?</a><br>
+<br>
+	<a href="https://youtu.be/8okxv1cVKzI">video data?</a><br>
+
+	<div id="outerDiv" style="margin:5px;">
+		<table id="Qcust"></table>
+	</div>
+</body>
+</html>
