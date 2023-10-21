@@ -4,6 +4,8 @@
 <html> 
 <body>
   <h2>My Cars Collection</h2>
+   <a href="https://free-jqgrid.github.io/getting-started/index.html">How to use free jqGrid?</a>
+  
   <table border="1">
     <tr bgcolor="#9acd32">
       <th style="text-align:left">Manufacturer</th>
