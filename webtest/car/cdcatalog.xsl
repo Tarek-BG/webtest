@@ -15,6 +15,7 @@
     <tr>
       <td><xsl:value-of select="Manufacturer"/></td>
       <td><xsl:value-of select="Model"/></td>
+      <td><xsl:value-of select="YearFrom"/></td>
     </tr>
     </xsl:for-each>
   </table>
