@@ -28,71 +28,34 @@
 	</script>
 	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
 	<script>
-	//<![CDATA[
-	/*global $ */
-	/*jslint browser: true */
+
 	$(function () {
-		"use strict";
-/*		var mydata = [
-				{ id: "10",  invdate: "2007-10-01", name: "test",   note: "note",   amount: "", tax: "", closed: true,  ship_via: "TN", total: "" },
-				{ id: "20",  invdate: "2007-10-02", name: "test2",  note: "note2",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
-				{ id: "30",  invdate: "2007-09-01", name: "test3",  note: "note3",  amount: "400.00", tax: "30.00", closed: false, ship_via: "FE", total: "430.00" },
-				{ id: "40",  invdate: "2007-10-04", name: "test4 test4 test4",  note: "note4",  amount: "200.00", tax: "10.00", closed: true,  ship_via: "TN", total: "210.00" },
-				{ id: "50",  invdate: "2007-10-31", name: "test5",  note: "note5",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
-				{ id: "60",  invdate: "2007-09-06", name: "test6",  note: "note6",  amount: "400.00", tax: "30.00", closed: false, ship_via: "FE", total: "430.00" },
-				{ id: "70",  invdate: "2007-10-04", name: "test7",  note: "note7",  amount: "200.00", tax: "10.00", closed: true,  ship_via: "TN", total: "210.00" },
-				{ id: "80",  invdate: "2007-10-03", name: "test8",  note: "note8",  amount: "300.00", tax: "20.00", closed: false, ship_via: "FE", total: "320.00" },
-				{ id: "90",  invdate: "2007-09-01", name: "test9 test9 test9 test9 test9",  note: "note9",  amount: "400.00", tax: "30.00", closed: false, ship_via: "TN", total: "430.00" },
-				{ id: "100", invdate: "2007-09-08", name: "test10", note: "note10", amount: "500.00", tax: "30.00", closed: true,  ship_via: "TN", total: "530.00" },
-				{ id: "110", invdate: "2007-09-08", name: "test11", note: "note11", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" },
-				{ id: "120", invdate: "2007-09-10", name: "test12", note: "note12", amount: "500.00", tax: "30.00", closed: false, ship_via: "FE", total: "530.00" }
+			jQuery('#cars').jqGrid({
+			url: "cars.xml",
+			datatype: 'xml',
+			colNames:["Manufacturer","Model","Fuel", "Cylinder","Horsepower", "YearFrom", "Source"],
+			colModel:[
+				{name:"Manufacturer",index:'Manufacturer', width:90, align:"right"},
+				{name:"Model",index:'Model', width:90, align:"right"},
+				{name:"Fuel",index:'Fuel', width:90, align:"right"},
+				{name:"Cylinder",index:'Cylinder', width:90, align:"right"},
+				{name:"Horsepower",index:'Horsepower', width:90, align:"right"},
+				{name:"YearFrom",index:'YearFrom', width:90, align:"right"},
+				{name:"Source",index:'Source', width:90, align:"right"},
 			],
-			
-			$grid = $("#list"),
-			initDateEdit = function (elem) {
-				$(elem).datepicker({
-					dateFormat: "dd-M-yy",
-					autoSize: true,
-					changeYear: true,
-					changeMonth: true,
-					showButtonPanel: true,
-					showWeek: true
-				});
-			},
-			initDateSearch = function (elem) {
-				setTimeout(function () {
-					initDateEdit(elem);
-				}, 100);
-			};
-*/
-
-
-jQuery('#cars').jqGrid({
-  url: 'cars.xml',
-  datatype: 'xml',
-  colNames:['Manufacturer','Model', 'Fuel', 'Cylinder','Horsepower', 'YearFrom', 'Source'],
-  colModel:[
-      {name:'Manufacturer',index:'Manufacturer', width:90, align:"right"},
-      {name:'Model',index:'Model', width:90, align:"right"},
-      {name:'Fuel',index:'Fuel', width:90, align:"right"},
-      {name:'Cylinder',index:'Cylinder', width:90, align:"right"},
-      {name:'Horsepower',index:'Horsepower', width:90, align:"right"},
-      {name:'YearFrom',index:'YearFrom', width:90, align:"right"},
-      {name:'Source',index:'Source', width:90, align:"right"},
-  ],
-  pager : '#pager',
-  rowNum:10,
-  scrollOffset:0,
-  height: 'auto',
-  autowidth:true,
-  viewrecords: true,
-  gridview: true,
-  xmlReader: {
-      root : "list",
-      row: "com\\.abc\\.db\\.ConfigInfo",
-      repeatitems: false
-  }
-});
+			pager : '#pager',
+			rowNum:10,
+			scrollOffset:0,
+			height: 'auto',
+			autowidth:true,
+			viewrecords: true,
+			gridview: true,
+			xmlReader: {
+				root : "cars",
+				row: "com\\.abc\\.db\\.ConfigInfo",
+				repeatitems: false
+			}
+			});
 
 
 
