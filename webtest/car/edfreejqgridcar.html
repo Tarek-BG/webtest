@@ -67,23 +67,24 @@
 
 		$grid.jqGrid({
 			url: 'cdcatalog_with_xsl.xml',
-			data: mydata,
-			colNames: ["", "Client", "Date", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
+			datatype: 'xml',
+			/*data: mydata,*/
+			colNames: ["", "Manufacturer", "Date", "Cylinder", "Horsepower", "YearFrom", "Closed", "Shipped via", "Source"],
 			colModel: [
 				{ name: "act", template: "actions" },
-				{ name: "name", align: "center", width: 92, editrules: {required: true} },
-				{ name: "invdate", width: 72, align: "center", sorttype: "date", frozen: true,
+				{ name: "Manufacturer", align: "center", width: 92, editrules: {required: true} },
+				/*{ name: "invdate", width: 72, align: "center", sorttype: "date", frozen: true,
 					formatter: "date", formatoptions: { newformat: "d-M-Y", reformatAfterEdit: true }, datefmt: "d-M-Y",
 					editoptions: { dataInit: initDateEdit },
-					searchoptions: { sopt: ["eq", "ne", "lt", "le", "gt", "ge"], dataInit: initDateSearch } },
-				{ name: "amount", width: 56, template: "number" },
-				{ name: "tax", width: 35, template: "number", autoResizableMinColSize: 40 },
-				{ name: "total", width: 43, template: "number" },
+					searchoptions: { sopt: ["eq", "ne", "lt", "le", "gt", "ge"], dataInit: initDateSearch } },*/
+				{ name: "Cylinder", width: 56, template: "number" },
+				{ name: "Horsepower", width: 35, template: "number", autoResizableMinColSize: 40 },
+				{ name: "YearFrom", width: 43, template: "number" },
 				{ name: "closed", width: 49, template: "booleanCheckboxFa" },
-				{ name: "ship_via", width: 76, align: "center", formatter: "select",
+				/*{ name: "ship_via", width: 76, align: "center", formatter: "select",
 					edittype: "select", editoptions: { value: "FE:FedEx;TN:TNT;IN:Intim", defaultValue: "IN" },
-					stype: "select", searchoptions: { sopt: ["eq", "ne"], value: ":Any;FE:FedEx;TN:TNT;IN:IN" } },
-				{ name: "note", width: 43, edittype: "textarea", sortable: false }
+					stype: "select", searchoptions: { sopt: ["eq", "ne"], value: ":Any;FE:FedEx;TN:TNT;IN:IN" } },*/
+				{ name: "Source", width: 43, edittype: "textarea", sortable: false }
 			],
 			cmTemplate: { editable: true, autoResizable: true },
 			iconSet: "fontAwesome",
