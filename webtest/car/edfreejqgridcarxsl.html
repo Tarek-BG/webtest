@@ -28,7 +28,7 @@
 	</script>
 	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
 	<script>
-
+	//<![CDATA[
 	$(function () {
 			jQuery("#Qcars").jqGrid({
 			url: '/cdcatalog_with_xsl.xml',
@@ -40,23 +40,29 @@
 
 			],
 
-			rowNum:10,
-			scrollOffset:0,
-			height: 'auto',
-			autowidth:true,
+			cmTemplate: { editable: true, autoResizable: true },
+			iconSet: "fontAwesome",
+			rowNum: 10,
+			autoResizing: { compact: true },
+			rowList: [5, 10, 20, "10000:All"],
 			viewrecords: true,
-			gridview: true,
-			xmlReader: {
-				root : "cars",
-				row: "car",
-				repeatitems: false
-			}
-			});
-
-
-
+			pager: true,
+			toppager: true,
+			rownumbers: true,
+			sortname: "invdate",
+			sortorder: "desc",
+			subGrid: true,
+			subGridRowExpanded: function (subgridDivId, rowId) {
+				$("#" + $.jgrid.jqID(subgridDivId)).html("<em>simple subgrid data for the row with id=" + rowId + "</em>");
+			},
+			inlineEditing: { keys: true },
+			caption: "Demonstration of new navGrid. Try to resize the grid"
+		}).jqGrid("navGrid", { view: true })
+		.jqGrid("inlineNav")
+		.jqGrid("filterToolbar")
+		.jqGrid("gridResize");
 	});
-
+	//]]>
 	</script>
 </head>
 <body>
