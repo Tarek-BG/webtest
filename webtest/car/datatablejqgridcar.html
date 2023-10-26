@@ -29,26 +29,25 @@
 	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
 
 	<script>
-	$(Document).ready(function(){
-			var baseurl= "https://tarek-bg.github.io/web/webtest/car/cars.xml";
-			var xmlhttp= new XMLHttpRequest();
-			xmlhttp.open("GET",baseurl,true);
-			xmlhttp.onreadystatechange=function(){
-				if(xmlhttp.readyState==4 && xmlhttp.status ==200){
-					var cars = JSON.parse(xmlhttp.responseText);
-					$("#exemple").DataTable({
-						data:cars,
-						"columns":[
-							{"data":"Manufacturer"},
-							{"data":"Model"},
-							{"data":"Fuel"},
-							{"data":"Cylinder"},
-						]
-				});
-			}
-		}
-		xmlhttp.send();
-	});
+
+
+	$(function() {
+    $.ajax({
+        type: "get",
+        url: "https://tarek-bg.github.io/web/webtest/car/cars.xml",
+        dataType: "xml",
+        success: function(data) {
+            /* handle data here */
+            $("#show_table").html(data);
+        },
+        error: function(xhr, status) {
+            /* handle error here */
+            $("#show_table").html(status);
+        }
+    });
+});
+
+
 
 	//<![CDATA[
 	/*global $ */
