@@ -35,7 +35,8 @@
 	/*jslint browser: true */
 	$(function () {
 
-
+		var mydata =xdata,	
+		
 		$.ajax({
         type: "get",
         url: "https://tarek-bg.github.io/web/webtest/car/loadcarM/carsM.xml",
@@ -52,7 +53,7 @@
 
 
 		"use strict";
-		var mydata =xdata,	
+
 	$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
