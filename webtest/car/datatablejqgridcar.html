@@ -36,9 +36,9 @@
         type: "get",
         url: "https://tarek-bg.github.io/web/webtest/car/loadcarM/carsM.xml",
         dataType: "xml",
-        success: function(data) {
+        success: function(xdata) {
             /* handle data here */
-            $("#show_table").html(data);
+            $("#show_table").html(xdata);
         },
         error: function(xhr, status) {
             /* handle error here */
@@ -53,8 +53,13 @@
 	/*global $ */
 	/*jslint browser: true */
 	$(function () {
+
+
+
+
+		
 		"use strict";
-		var mydata =data,	
+		var mydata =xdata,	
 	$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
