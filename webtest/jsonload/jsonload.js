@@ -7,7 +7,7 @@ btn.addEventListener("click", function() {
     var ourRequest02 = new XMLHttpRequest();
   ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-' + pageCounter + '.json');
     ourRequest02.open('GET', 'https://tarek-bg.github.io/web/webtest/car/loadcarM/carsM.xml');
-    console.log(JSON.parse(ourRequest.responseText));
+    console.log("ourRequest "ourRequest.status"   :  ourRequest "ourRequest02j.status);
   ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
       var ourData = JSON.parse(ourRequest.responseText);
