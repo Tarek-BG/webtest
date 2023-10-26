@@ -58,4 +58,8 @@ function renderHTML(data) {
   }
 
   animalContainer.insertAdjacentHTML('beforeend', htmlString);
+
+  var ourRequest02 = new XMLHttpRequest();
+  ourRequest02.open('GET', 'http://tarek-bg.github.io/web/webtest/car/loadcarM/carsM.xml');
+  console.log(ourRequest02.status);
 }
