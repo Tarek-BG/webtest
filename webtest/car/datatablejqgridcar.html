@@ -30,9 +30,13 @@
 
 	<script>
 
+	//<![CDATA[
+	/*global $ */
+	/*jslint browser: true */
+	$(function () {
 
-	$(function() {
-    $.ajax({
+
+		$.ajax({
         type: "get",
         url: "https://tarek-bg.github.io/web/webtest/car/loadcarM/carsM.xml",
         dataType: "xml",
@@ -45,19 +49,8 @@
             $("#show_table").html(status);
         }
     });
-});
 
 
-
-	//<![CDATA[
-	/*global $ */
-	/*jslint browser: true */
-	$(function () {
-
-
-
-
-		
 		"use strict";
 		var mydata =xdata,	
 	$grid = $("#list"),
