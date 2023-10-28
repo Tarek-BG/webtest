@@ -8,9 +8,16 @@
 </head>
 <body>
     <script>
-        const xmlString ="aaaaa";
-        const XMLDocument=new DomParser().parseFromString(xmlString, "text/xml");
-        console.log(XMLDocument);
+        let xmlContent = '';
+        let tableBooks = document.getElementById('books');
+        fetch('books.xml').then((Response)=>{
+            Response.text().then((xml)=>{
+
+            });
+        });
+       // const xmlString ="aaaaa";
+       // const XMLDocument=new DomParser().parseFromString(xmlString, "text/xml");
+        //console.log(XMLDocument);
 
     </script>
 </body>
