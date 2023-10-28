@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cars>
+	<cars>  <Car>
+		<Manufacturer>Audi</Manufacturer>
+		<Model>A6 AVANT QUATTRO</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>255</Horsepower>
+		<YearFrom>2006</YearFrom>
+		<YearTill>2008</YearTill>
+		<Source>US</Source>
+		<Series>A6</Series>
+	</Car>
 	<car>
 		<manufacturer>BMW</manufacturer>
 		<model>550i xDrive Gran Turismo</model>
