@@ -12,8 +12,8 @@
             <thead>
                 <tr>
                     <th>Manufacturer</th>
-                    <th>date</th>
                     <th>Model</th>
+                    <th>Fuel</th>
                 </tr>
             </thead> 
             <tbody>
@@ -40,12 +40,12 @@
                         td.innerText= bookXmlNode.children[0].innerHTML;
                         row.appendChild(td);
 
-                        //date
+                        //Model
                         td = document.createElement('td');
                         td.innerText= bookXmlNode.children[1].innerHTML;
                         row.appendChild(td);
 
-                        //Model
+                        //Fuel
                         td = document.createElement('td');
                         td.innerText= bookXmlNode.children[2].innerHTML;
                         row.appendChild(td);
