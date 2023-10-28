@@ -14,7 +14,7 @@
             Response.text().then((xml)=>{
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
-                    console(xmlContent);
+                    console(xmlContent.Response.xml);
             });
         });
        // const xmlString ="aaaaa";
