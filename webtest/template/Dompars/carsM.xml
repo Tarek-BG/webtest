@@ -20,4 +20,14 @@
 		<YearTill>2004</YearTill>
 		<Source>US</Source>ies>
 	</car>
+	<Car>
+		<Manufacturer>Volvo</Manufacturer>
+		<Model>S80 AWD</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>235</Horsepower>
+		<YearFrom>2007</YearFrom>
+		<YearTill>2008</YearTill>
+		<Source>US</Source>
+		<Series>S</Series>
+    </Car>
 </cars>
