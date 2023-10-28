@@ -14,7 +14,27 @@
             Response.text().then((xml)=>{
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
-                    console.log(xmlContent);
+                   let cars = xmlDOM.querySelectorAll('car');
+
+                   cars.forEach(carXmlNode =>{
+                        let row =document.createElement('tr');
+
+                        //Manufacturer
+                        let td = document.createElement('td');
+                        td.innerText= carXmlNode.children[0].innerHTML;
+                        row.appendChild(td);
+
+                        //date
+                        let td = document.createElement('td');
+                        td.innerText= carXmlNode.children[1].innerHTML;
+                        row.appendChild(td);
+
+                        //Model
+                        let td = document.createElement('td');
+                        td.innerText= carXmlNode.children[2].innerHTML;
+                        row.appendChild(td);
+
+                   })
             });
         });
        // const xmlString ="aaaaa";
