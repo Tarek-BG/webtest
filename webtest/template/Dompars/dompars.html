@@ -31,22 +31,22 @@
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
                    let cars = xmlDOM.querySelectorAll('car');
 
-                   cars.forEach(carXmlNode =>{
+                   cars.forEach(bookXmlNode =>{
                         let row =document.createElement('tr');
 
                         //Manufacturer
                         let td = document.createElement('td');
-                        td.innerText= carXmlNode.children[0].innerHTML;
+                        td.innerText= bookXmlNode.children[0].innerHTML;
                         row.appendChild(td);
 
                         //date
                         td = document.createElement('td');
-                        td.innerText= carXmlNode.children[1].innerHTML;
+                        td.innerText= bookXmlNode.children[1].innerHTML;
                         row.appendChild(td);
 
                         //Model
                         td = document.createElement('td');
-                        td.innerText= carXmlNode.children[2].innerHTML;
+                        td.innerText= bookXmlNode.children[2].innerHTML;
                         row.appendChild(td);
 
                    })
