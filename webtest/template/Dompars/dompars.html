@@ -25,7 +25,7 @@
 <script>
         let xmlContent = '';
         let tableCars = document.getElementById('cars');
-        fetch('https://tarek-bg.github.io/web/webtest/car/cars.xml').then((Response)=>{
+        fetch('carsM.xml').then((Response)=>{
             Response.text().then((xml)=>{
                 xmlContent = xml;
                     let parser = new DOMParser();
