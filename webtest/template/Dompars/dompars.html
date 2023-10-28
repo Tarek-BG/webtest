@@ -27,6 +27,7 @@
         let tableCars = document.getElementById('cars');
         fetch('https://tarek-bg.github.io/web/webtest/car/cars.xml').then((Response)=>{
             Response.text().then((xml)=>{
+                xmlContent = xml;
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
                    let cars = xmlDOM.querySelectorAll('car');
@@ -48,7 +49,7 @@
                         td = document.createElement('td');
                         td.innerText= bookXmlNode.children[2].innerHTML;
                         row.appendChild(td);
-
+                    tableCars.children[1].appendChild(row);
                    })
             });
         });
