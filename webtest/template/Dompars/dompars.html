@@ -7,7 +7,19 @@
     <title>Parse xml with JavaScript</title>
 </head>
 <body>
-    <script>
+    <div id='content'>
+        <table id="cars" cellpadding="10px" style="text-align:let;">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>   
+        </table>
+    </div>
+
+<script>
         let xmlContent = '';
         let tableBooks = document.getElementById('books');
         fetch('https://tarek-bg.github.io/web/webtest/car/cars.xml').then((Response)=>{
