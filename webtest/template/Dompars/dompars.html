@@ -8,15 +8,17 @@
 </head>
 <body>
     <script>
-        const xmlString='
-        <tutorials>
-            <tutorial>
-                <id>b59AgnPOGxc</id>
-                <title>3+ Ways to...</title>
-        </tutorials>
-        ';
+        const xmlString = "
+            <tutorials>
+                <tutorial>
+                    <id>b59AgnPOGxc</id>
+                    <title>3+ Ways to...</title>
+                </tutorial>            
+            </tutorials>
+            ';
         const XMLDocument=new DomParser().parseFromString(xmlString, "text/xml");
         console.log(XMLDocument);
 
     </script>
 </body>
+</html>
