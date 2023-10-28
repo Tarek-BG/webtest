@@ -22,15 +22,4 @@
     <Source>US</Source>
     <Series>6</Series>
   </Car>
-  <Car>
-    <Manufacturer>BMW</Manufacturer>
-    <Model>640i xDrive Coupe</Model>
-    <Fuel>Gas</Fuel>
-    <Cylinder>6</Cylinder>
-    <Horsepower>300</Horsepower>
-    <YearFrom>2014</YearFrom>
-    <YearTill>2014</YearTill>
-    <Source>US</Source>
-    <Series>6</Series>
-  </Car>
  </cars>
