@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Parse xml with JavaScript</title>
+</head>
+<body>
+    <script>
+        const xmlString='
+        <tutorials>
+            <tutorial>
+                <id>b59AgnPOGxc</id>
+                <title>3+ Ways to...</title>
+        </tutorials>
+        ';
+        const XMLDocument=new DomParser().parseFromString(xmlString, "text/xml");
+        console.log(XMLDocument);
+
+    </script>
+</body>
