@@ -12,14 +12,12 @@
 		<series>5</series>
 	</car>
 	<car>
-		<manufacturer>BMW</manufacturer>
-		<model>550i xDrive GranTurismo</model>
-		<fuel>Gas</fuel>
-		<cylinder>8</cylinder>
-		<horsepower>400</horsepower>
-		<yearfrom>2010</yearfrom>
-		<yeartill>2012</yeartill>
-		<source>US</source>
-		<series>5</series>
+		<Manufacturer>Subaru</Manufacturer>
+		<Model>LEGACY/OUTBACK WAGON AWD</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>160</Horsepower>
+		<YearFrom>2004</YearFrom>
+		<YearTill>2004</YearTill>
+		<Source>US</Source>ies>
 	</car>
 </cars>
