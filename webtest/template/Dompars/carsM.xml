@@ -33,24 +33,4 @@
     <Source>US</Source>
     <Series>6</Series>
   </Car>
-  <Car>
-    <Manufacturer>BMW</Manufacturer>
-    <Model>645CI</Model>
-    <Fuel>Gas</Fuel>
-    <Horsepower>325</Horsepower>
-    <YearFrom>2004</YearFrom>
-    <YearTill>2005</YearTill>
-    <Source>US</Source>
-    <Series>6</Series>
-  </Car>
-  <Car>
-    <Manufacturer>BMW</Manufacturer>
-    <Model>645CI CONVERTIBLE</Model>
-    <Fuel>Gas</Fuel>
-    <Horsepower>325</Horsepower>
-    <YearFrom>2004</YearFrom>
-    <YearTill>2005</YearTill>
-    <Source>US</Source>
-    <Series>6</Series>
-  </Car>
  </cars>
