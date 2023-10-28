@@ -11,9 +11,9 @@
         <table id="cars" cellpadding="10px" style="text-align:let;">
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Manufacturer</th>
+                    <th>date</th>
+                    <th>Model</th>
                 </tr>
             </thead>   
         </table>
@@ -21,7 +21,7 @@
 
 <script>
         let xmlContent = '';
-        let tableBooks = document.getElementById('books');
+        let tableBooks = document.getElementById('cars');
         fetch('https://tarek-bg.github.io/web/webtest/car/cars.xml').then((Response)=>{
             Response.text().then((xml)=>{
                     let parser = new DOMParser();
@@ -34,7 +34,9 @@
                         //Manufacturer
                         let td = document.createElement('td');
                         td.innerText= carXmlNode.children[0].innerHTML;
-                        row.appendChild(td);
+                        row.appendChild(array.forEach(element => {
+                            td
+                        }););
 
                         //date
                         let td = document.createElement('td');
