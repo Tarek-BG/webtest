@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<cars>  <Car>
-		<Manufacturer>Audi</Manufacturer>
+		<manufacturer>Audi</manufacturer>
 		<Model>A6 AVANT QUATTRO</Model>
 		<Fuel>Gas</Fuel>
+		<cylinder>8</cylinder>
 		<Horsepower>255</Horsepower>
 		<YearFrom>2006</YearFrom>
 		<YearTill>2008</YearTill>
