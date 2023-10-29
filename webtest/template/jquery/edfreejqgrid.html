@@ -41,9 +41,9 @@ console.log("start here:mydata");
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
                    let cars = xmlDOM.querySelectorAll('car');	
-			});
+			});		console.log(tableCar);
 		});
-		console.log(tableCar);
+
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
