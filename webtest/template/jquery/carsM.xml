@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<cars>  <Car>
+		<manufacturer>Audi</manufacturer>
+		<Model>A6 AVANT QUATTRO</Model>
+		<Fuel>Gas</Fuel>
+		<cylinder>8</cylinder>
+		<Horsepower>255</Horsepower>
+		<YearFrom>2006</YearFrom>
+		<YearTill>2008</YearTill>
+		<Source>US</Source>
+		<Series>A6</Series>
+	</Car>
+	<car>
+		<manufacturer>BMW</manufacturer>
+		<model>550i xDrive Gran Turismo</model>
+		<fuel>Diesel</fuel>
+		<cylinder>8</cylinder>
+		<horsepower>448</horsepower>
+		<yearfrom>2013</yearfrom>
+		<yeartill>2014</yeartill>
+		<source>US</source>
+		<series>5</series>
+	</car>
+	<car>
+		<Manufacturer>Subaru</Manufacturer>
+		<Model>LEGACY/OUTBACK WAGON AWD</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>160</Horsepower>
+		<YearFrom>2004</YearFrom>
+		<YearTill>2004</YearTill>
+		<Source>US</Source>ies>
+	</car>
+	<Car>
+		<Manufacturer>Volvo</Manufacturer>
+		<Model>S80 AWD</Model>
+		<Fuel>Gas</Fuel>
+		<Horsepower>235</Horsepower>
+		<YearFrom>2007</YearFrom>
+		<YearTill>2008</YearTill>
+		<Source>US</Source>
+		<Series>S</Series>
+    </Car>
+		<car>
+		<manufacturer>BMW</manufacturer>
+		<model>550i xDrive Gran Turismo</model>
+		<fuel>Electric</fuel>
+		<cylinder>8</cylinder>
+		<horsepower>448</horsepower>
+		<yearfrom>2013</yearfrom>
+		<yeartill>2014</yeartill>
+		<source>US</source>
+		<series>5</series>
+	</car>
+	<car>
+		<Manufacturer>Subaru</Manufacturer>
+		<Model>LEGACY/OUTBACK WAGON AWD</Model>
+		<Fuel>Atomic</Fuel>
+		<Horsepower>160</Horsepower>
+		<YearFrom>2004</YearFrom>
+		<YearTill>2004</YearTill>
+		<Source>US</Source>ies>
+	</car>
+	  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>173</Horsepower>
+    <YearFrom>2004</YearFrom>
+    <YearTill>2004</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>130</Horsepower>
+    <YearFrom>2003</YearFrom>
+    <YearTill>2005</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>132</Horsepower>
+    <YearFrom>2009</YearFrom>
+    <YearTill>2009</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>164</Horsepower>
+    <YearFrom>2006</YearFrom>
+    <YearTill>2006</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>170</Horsepower>
+    <YearFrom>2005</YearFrom>
+    <YearTill>2005</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>180</Horsepower>
+    <YearFrom>2003</YearFrom>
+    <YearTill>2003</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>Nissan</Manufacturer>
+    <Model>350Z</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>300</Horsepower>
+    <YearFrom>2005</YearFrom>
+    <YearTill>2007</YearTill>
+    <Source>US</Source>
+    <Series>350</Series>
+  </Car>
+
+</cars>
