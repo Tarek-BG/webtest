@@ -41,7 +41,7 @@ console.log("start here:mydata");
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
                    let cars = xmlDOM.querySelectorAll('car');	
-			});		console.log(xmlContent);
+			});		
 		});
 
 			$grid = $("#list"),
@@ -60,7 +60,7 @@ console.log("start here:mydata");
 					initDateEdit(elem);
 				}, 100);
 			};
-
+			console.log(mydata);
 		$grid.jqGrid({
 			data: mydata,
 			colNames: ["", "Client", "Date", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
