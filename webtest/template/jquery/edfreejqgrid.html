@@ -40,7 +40,7 @@ console.log("start here:mydata");
                 xmlContent = xml;
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
-                   let cars = xmlDOM.querySelectorAll('car');
+                   let cars = xmlDOM.querySelectorAll('car');console.log(xmlDOM);
 			});
 		});
 
