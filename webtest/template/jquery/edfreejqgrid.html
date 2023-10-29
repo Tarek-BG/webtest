@@ -32,17 +32,24 @@ console.log("start here:mydata");
 	$(function () {
 		//"use strict";
 		//var mydata = 
-		
-        let mydata = '';
+        let mydata = '';		
         let tableCars = document.getElementById('cars');
-        fetch('carsM.xml').then((Response)=>{
-            Response.text().then((xml)=>{
-                xmlContent = xml;
-                    let parser = new DOMParser();
-                    let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
-                   let cars = xmlDOM.querySelectorAll('car');	
-			});		
-		});
+
+		getmydata = () => {
+  fetch('carsM.xml')
+  .then(response => response.text())
+  .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+  .then(data => console.log(data));
+};
+
+//        fetch('carsM.xml').then((Response)=>{
+//            Response.text().then((xml)=>{
+//                xmlContent = xml;
+//                    let parser = new DOMParser();
+//                    let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
+//                   let cars = xmlDOM.querySelectorAll('car');	
+//			});		
+//		});
 
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
