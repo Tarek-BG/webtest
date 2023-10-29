@@ -60,4 +60,69 @@
 		<YearTill>2004</YearTill>
 		<Source>US</Source>ies>
 	</car>
+	  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>173</Horsepower>
+    <YearFrom>2004</YearFrom>
+    <YearTill>2004</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>130</Horsepower>
+    <YearFrom>2003</YearFrom>
+    <YearTill>2005</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>132</Horsepower>
+    <YearFrom>2009</YearFrom>
+    <YearTill>2009</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>164</Horsepower>
+    <YearFrom>2006</YearFrom>
+    <YearTill>2006</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>170</Horsepower>
+    <YearFrom>2005</YearFrom>
+    <YearTill>2005</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>New United Motor</Manufacturer>
+    <Model>VIBE</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>180</Horsepower>
+    <YearFrom>2003</YearFrom>
+    <YearTill>2003</YearTill>
+    <Source>US</Source>
+  </Car>
+  <Car>
+    <Manufacturer>Nissan</Manufacturer>
+    <Model>350Z</Model>
+    <Fuel>Gas</Fuel>
+    <Horsepower>300</Horsepower>
+    <YearFrom>2005</YearFrom>
+    <YearTill>2007</YearTill>
+    <Source>US</Source>
+    <Series>350</Series>
+  </Car>
+
 </cars>
