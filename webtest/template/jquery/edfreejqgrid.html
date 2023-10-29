@@ -41,7 +41,7 @@ console.log("start here:mydata");
                     let parser = new DOMParser();
                     let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
                    let cars = xmlDOM.querySelectorAll('car');	
-			});		console.log(this.tableCars);
+			});		console.log(tableCars.xmlContent);
 		});
 
 			$grid = $("#list"),
