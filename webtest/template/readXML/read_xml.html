@@ -59,7 +59,7 @@
                 list.appendChild(li);
             }
         }
-        var x2js = new X2JS();
+        var x2js = xml;//new X2JS();
         function convertXml2JSon() {
         $("#jsonArea").val(JSON.stringify(x2js.xml_str2json($(xml).val())));
 }
