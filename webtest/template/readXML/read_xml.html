@@ -38,8 +38,8 @@
         })
         
         function buildHouseList(x){
-            let list = document.getElementById('houses');
-            let houses = x.getElementsByTagName('house');
+            let list = document.getElementById('cars');
+            let houses = x.getElementsByTagName('car');
             for(let i=0; i<houses.length; i++){
                 let li = document.createElement('li');
                 let house = houses[i].firstChild.nodeValue;
