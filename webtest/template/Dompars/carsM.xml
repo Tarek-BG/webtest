@@ -40,4 +40,24 @@
 		<Source>US</Source>
 		<Series>S</Series>
     </Car>
+		<car>
+		<manufacturer>BMW</manufacturer>
+		<model>550i xDrive Gran Turismo</model>
+		<fuel>Electric</fuel>
+		<cylinder>8</cylinder>
+		<horsepower>448</horsepower>
+		<yearfrom>2013</yearfrom>
+		<yeartill>2014</yeartill>
+		<source>US</source>
+		<series>5</series>
+	</car>
+	<car>
+		<Manufacturer>Subaru</Manufacturer>
+		<Model>LEGACY/OUTBACK WAGON AWD</Model>
+		<Fuel>Atomic</Fuel>
+		<Horsepower>160</Horsepower>
+		<YearFrom>2004</YearFrom>
+		<YearTill>2004</YearTill>
+		<Source>US</Source>ies>
+	</car>
 </cars>
