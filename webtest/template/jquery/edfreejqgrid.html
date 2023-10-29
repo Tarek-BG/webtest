@@ -36,11 +36,11 @@ console.log("start here:mydata");
         let tableCars = document.getElementById('cars');
 
 		getmydata = () => {
-  fetch('carsM.xml')
-  .then(response => response.text())
-  .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-  .then(data => console.log(data));
-};
+				fetch('carsM.xml')
+				.then(response => response.text())
+				.then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+				.then(data => console.log(data));
+				};
 
 //        fetch('carsM.xml').then((Response)=>{
 //            Response.text().then((xml)=>{

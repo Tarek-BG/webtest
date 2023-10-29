@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reading Data from XML Files</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header>
+        <h1>Reading Data from XML Files</h1>
+        <a href="https://thequickadvisor.com/how-to-get-a-jqgrid-selected-row-cells-value/#How_to_get_a_jqgrid_selected_row_cells_value">changevideo data?</a><br>
+        <br>
+
+    </header>
+    <main>
+        <ul id="swords"></ul>
+        <ul id="houses"></ul>
+        <pre id="output"></pre>
+    </main>   
+    <script>
+        //XMLHttpRequest() - has responseXML property in the response
+        
+        document.addEventListener('DOMContentLoaded', ()=>{
+            //fetch the data as soon as the page has loaded
+            let url = "read.xml";
+            fetch(url)
+            .then(response=>response.text())
+            .then(data=>{
+                //console.log(data);  //string
+                let parser = new DOMParser();
+                let xml = parser.parseFromString(data, "application/xml");
+                document.getElementById('output').textContent = data;
+                console.log(xml);
+                buildHouseList(xml);
+                buildSwordList(xml);
+            });
+        })
+        
+        function buildHouseList(x){
+            let list = document.getElementById('houses');
+            let houses = x.getElementsByTagName('house');
+            for(let i=0; i<houses.length; i++){
+                let li = document.createElement('li');
+                let house = houses[i].firstChild.nodeValue;
+                li.textContent = house;
+                list.appendChild(li);
+            }
+        }
+        
+        function buildSwordList(x){
+            let list = document.getElementById('swords');
+            let swords = x.getElementsByTagName('sword');
+            for(let i=0; i<swords.length; i++){
+                let li = document.createElement('li');
+                let swordName = swords[i].firstChild.nodeValue;
+                let person = swords[i].getAttribute('owner');
+                li.textContent = `${swordName} - ${person}`;
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
