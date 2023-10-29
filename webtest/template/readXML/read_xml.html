@@ -11,7 +11,7 @@
 <a href="https://youtu.be/MDAWie2Sicc">changevideo data?</a><br>
 <br>
     <header>
-        <h1>XML Files: Reading Data 001</h1>
+        <h1>XML Files: Reading Data 01</h1>
     </header>
     <main>
         <ul id="swords"></ul>
@@ -29,7 +29,7 @@
             .then(data=>{
                 //console.log(data);  //string
                 let parser = new DOMParser();
-                let xml = parser.parseFromString(data, "application/json");
+                let xml = parser.parseFromString(data, "application/xml");
                 document.getElementById('output').textContent = data;
                 console.log(xml);
                 buildHouseList(xml);
@@ -59,6 +59,10 @@
                 list.appendChild(li);
             }
         }
+        var x2js = new X2JS();
+        function convertXml2JSon() {
+        $("#jsonArea").val(JSON.stringify(x2js.xml_str2json($(xml).val())));
+}
     </script>
 </body>
 </html>
