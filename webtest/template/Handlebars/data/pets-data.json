@@ -5,7 +5,7 @@
         "species" : "Cat",
         "favFoods" : ["wet food", "dry food", "<strong>any</strong> food"],
         "birthYear" : 2016,
-        "photo" : "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
+        "photo" : "https://tarek-bg.github.io/web/webtest/template/Handlebars/data/images/cat-2.jpg"
       },
       {
         "name" : "Barksalot",
@@ -14,11 +14,11 @@
         "photo" : "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
       },
       {
-        "name" : "Meowsalot",
-        "species" : "Cat",
+        "name" : "surprise",
+        "species" : "ESS",
         "favFoods" : ["tuna", "catnip", "celery"],
-        "birthYear" : 2012,
-        "photo" : "https://learnwebcode.github.io/json-example/images/cat-1.jpg"
+        "birthYear" : 1930,
+        "photo" : "ttps://tarek-bg.github.io/web/webtest/template/Handlebars/data/images/ess-0.jpg"
       }
     ]
   }
