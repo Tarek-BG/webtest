@@ -39,7 +39,8 @@ console.log("start here:mydata");
 				fetch('/webtest/template/Handlebars/data/pets-data.json')
 				.then(response => response.text())
 				.then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-				.then(data => console.log(getmydata));
+				.then(data => );
+				console.log(getmydata);
 				};
 
 //        fetch('carsM.xml').then((Response)=>{
