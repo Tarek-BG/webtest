@@ -40,10 +40,10 @@ console.log("start here:mydata");
 				.then(response => response.text())
 				.then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
 				.then(data => mydata);
+
+				};
 				console.log(" here's :mydata");
 				console.log(getmydata);
-				};
-
 //        fetch('carsM.xml').then((Response)=>{
 //            Response.text().then((xml)=>{
 //                xmlContent = xml;
