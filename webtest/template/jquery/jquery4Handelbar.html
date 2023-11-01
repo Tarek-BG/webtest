@@ -33,6 +33,9 @@
 
 	$(function () {
 
+		let mydata = '';		
+        let tableCars = document.getElementById('pets');
+
 console.log("start here:data");
 		$.getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
 			console.log(data);
@@ -58,7 +61,7 @@ console.log("End here:data");
 			};
 //			console.log(document);
 		$grid.jqGrid({
-			data: pets,
+			data: mydata,
 			colNames: ["", "Client", "Date", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
 			colModel: [
 				{ name: "act", template: "actions" },
