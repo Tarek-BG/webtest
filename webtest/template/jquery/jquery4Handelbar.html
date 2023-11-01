@@ -28,7 +28,12 @@
 	</script>
 	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
 	<script>
-console.log("start here:mydata");
+
+console.log("start here:data");
+		$.getJSON('/webtest/template/Handlebars/data/pets-data.json',function(data){
+			console.log(data)
+		});
+console.log("End here:data");		
 	$(function () {
 		//"use strict";
 		//var mydata = 
@@ -117,6 +122,9 @@ console.log("start here:mydata");
 	</script>
 </head>
 <body>
+	<h2>pets-data</h2>
+	<a href="https://tarek-bg.github.io/web/webtest/template/catalog_xsl/catalog_with_xsl.xml">catalog_with_xsl?</a><br>
+
 	<div id="outerDiv" style="margin:5px;">
 		<table id="list"></table>
 	</div>
