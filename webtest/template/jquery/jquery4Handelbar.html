@@ -29,37 +29,16 @@
 	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
 	<script>
 
+
+
+	$(function () {
+
 console.log("start here:data");
 		$.getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
 			console.log(data);
 		});
 console.log("End here:data");	
 
-	$(function () {
-		//"use strict";
-		//var mydata = 
-       // let mydata = data;		
-       // let tableCars = document.getElementById('json');
-
-/*		getmydata = () => {
-				fetch('./webtest/template/Handlebars/data/pets-data.json')
-				.then(response => response.text())
-				.then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-				.then(data => mydata);
-
-				};*/
-				console.log(" here's :data" + data);
-				console.log(getmydata.response.text);
-
-
-//        fetch('carsM.xml').then((Response)=>{
-//            Response.text().then((xml)=>{
-//                xmlContent = xml;
-//                    let parser = new DOMParser();
-//                    let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
-//                   let cars = xmlDOM.querySelectorAll('car');	
-//			});		
-//		});
 
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
