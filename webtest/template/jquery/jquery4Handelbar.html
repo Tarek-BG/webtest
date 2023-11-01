@@ -37,9 +37,22 @@
         let tableCars = document.getElementById('pets');
 
 console.log("start here:data");
-		$.getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
+		//ver01
+	/*	$.getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
 			console.log(data);
 		});
+	*/	
+		//ver02
+		$.ajax({
+			url:'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',
+			dataType: 'json',
+			type: 'get',
+			cache: false,
+			success: function(data){
+					console.log(data);
+			}
+		});
+
 console.log("End here:data");	
 
 
