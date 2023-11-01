@@ -33,21 +33,22 @@ console.log("start here:data");
 		$.getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
 			console.log(data);
 		});
-console.log("End here:data");		
+console.log("End here:data");	
+
 	$(function () {
 		//"use strict";
 		//var mydata = 
-        let mydata = '';		
+        let mydata = data';		
         let tableCars = document.getElementById('json');
 
-		getmydata = () => {
+/*		getmydata = () => {
 				fetch('./webtest/template/Handlebars/data/pets-data.json')
 				.then(response => response.text())
 				.then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
 				.then(data => mydata);
 
-				};
-				console.log(" here's :data");
+				};*/
+				console.log(" here's :data" + data);
 				console.log(getmydata.response.text);
 
 
