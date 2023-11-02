@@ -57,7 +57,7 @@ console.log("start here:data");
 		});
 
 console.log("End here:data");	
-
+/*
 
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
@@ -76,7 +76,10 @@ console.log("End here:data");
 				}, 100);
 			};
 //			console.log(document);
-		$grid.jqGrid({
+		$grid
+*/		
+		
+		.jqGrid({
 			data: mydata,
 //			colNames: ["", "name", "Date", "birthYear", "Tax", "Total", "Closed", "Shipped via", "photo"],
 			colNames: ["", "name", "birthYear", "photo"],
@@ -117,6 +120,9 @@ console.log("End here:data");
 		.jqGrid("inlineNav")
 		.jqGrid("filterToolbar")
 		.jqGrid("gridResize");
+
+		console.log("Very End here:data");
+		console.log(mydata);	
 	});
 
 	</script>
