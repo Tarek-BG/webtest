@@ -80,7 +80,7 @@ console.log("End here:data");
 */		
 		
 		$("#list").jqGrid({
-			data:getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
+			data:$.getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
 			console.log(data);
 		}),
 
