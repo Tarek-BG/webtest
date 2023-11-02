@@ -80,6 +80,10 @@ console.log("End here:data");
 */		
 		
 		$("#list").jqGrid({
+			mydata:getJSON('https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',function(data){
+			console.log(data);
+		}),
+
 			data: mydata,
 //			colNames: ["", "name", "Date", "birthYear", "Tax", "Total", "Closed", "Shipped via", "photo"],
 			colNames: ["", "name", "birthYear", "photo"],
