@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>http://stackoverflow.com/q/27617764/315935</title>
+	<meta name="author" content="Oleg Kiriljuk">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://rawgit.com/free-jqgrid/jqGrid/master/css/ui.jqgrid.css">
+	<style>
+		html, body { font-size: 75%; }
+		.ui-datepicker select.ui-datepicker-year,
+		.ui-datepicker select.ui-datepicker-month {
+			color: black
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.9.2/js/i18n/grid.locale-en.js"></script>-->
+	<script>
+		$.jgrid = $.jgrid || {};
+		$.jgrid.no_legacy_api = true;
+		$.jgrid.useJSON = true;
+	</script>
+	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
+</head>
+
+
+<body>
+	<h2>pets-4data</h2>
+	<a href="https://www.guriddo.net/demo/guriddojs/edit_add_delete/dialogs/index.html">gurrido?</a><br>
+
+
+    <table id="jqGrid"></table>
+    <div id="jqGridPager"></div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#jqGrid").jqGrid({
+                url: 'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',
+				// we set the changes to be made at client side using predefined word clientArray
+                editurl: 'clientArray',
+                datatype: "json",
+                colModel: [
+                    {
+						label: 'Customer ID',
+                        name: 'CustomerID',
+                        width: 75,
+						key: true,
+						editable: true,
+						editrules : { required: true}
+                    },
+                    {
+						label: 'Company Name',
+                        name: 'CompanyName',
+                        width: 140,
+                        editable: true // must set editable to true if you want to make the field editable
+                    },
+                    {
+						label : 'Phone',
+                        name: 'Phone',
+                        width: 100,
+                        editable: true
+                    },
+                    {
+						label: 'Postal Code',
+                        name: 'PostalCode',
+                        width: 80,
+                        editable: true
+                    },
+                    {
+						label: 'City',
+                        name: 'City',
+                        width: 140,
+                        editable: true
+                    }
+                ],
+				sortname: 'CustomerID',
+				sortorder : 'asc',
+				loadonce: true,
+				viewrecords: true,
+                width: 780,
+                height: 200,
+                rowNum: 10,
+                pager: "#jqGridPager"
+            });
+
+            $('#jqGrid').navGrid('#jqGridPager',
+                // the buttons to appear on the toolbar of the grid
+                { edit: true, add: true, del: true, search: false, refresh: false, view: false, position: "left", cloneToTop: false },
+                // options for the Edit Dialog
+                {
+                    editCaption: "The Edit Dialog",
+                    recreateForm: true,
+					//checkOnUpdate : true,
+					//checkOnSubmit : true,
+					beforeSubmit : function( postdata, form , oper) {
+						if( confirm('Are you sure you want to update this row?') ) {
+							// do something
+							return [true,''];
+						} else {
+							return [false, 'You can not submit!'];
+						}
+					},
+                    closeAfterEdit: true,
+                    errorTextFormat: function (data) {
+                        return 'Error: ' + data.responseText
+                    }
+                },
+                // options for the Add Dialog
+                {
+                    closeAfterAdd: true,
+                    recreateForm: true,
+                    errorTextFormat: function (data) {
+                        return 'Error: ' + data.responseText
+                    }
+                },
+                // options for the Delete Dailog
+                {
+                    errorTextFormat: function (data) {
+                        return 'Error: ' + data.responseText
+                    }
+                });
+        });
+
+    </script>
+
+    
+</body>
+</html>
