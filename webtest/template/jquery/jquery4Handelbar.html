@@ -79,8 +79,8 @@ console.log("End here:data");
 		$grid
 */		
 		
-//		$("#list").jqGrid({
-			$.ajax.jqGrid({
+		$("#list").jqGrid({
+//			$.ajax({
 			url:'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json',
 			dataType: 'json',
 			type: 'get',
@@ -91,9 +91,9 @@ console.log("End here:data");
 			//	})
 			//	console.log(data);	mydata = data; console.log(mydata);
 			},
-//		}),
+//		}).
 
-			data: mydata,
+//			data: mydata,
 //			colNames: ["", "name", "Date", "birthYear", "Tax", "Total", "Closed", "Shipped via", "photo"],
 			colNames: ["", "name", "birthYear", "photo"],
 			colModel: [
