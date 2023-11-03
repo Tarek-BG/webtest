@@ -1,0 +1,2 @@
+to Comment code   ctrl+k+c
+to Uncomment code    ctrl+k+u
