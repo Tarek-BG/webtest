@@ -1,7 +1,26 @@
 {{#each pets}}
   <div class="pet">
     <div class="photo-column">
-      <img src="{{photo}}">
+      <!--img src="{{photo}}"-->
+
+
+          <button onclick="playVideo()" type="button">Play</button>
+          <button onclick="pauseVideo()" type="button">Pause</button><br> 
+          <video id="myVid" width="400" height="200">
+          <source src="{{photo}}" type="video/mp4">
+            Sorry, your browser does not support HTML5 video.
+          </video>
+          <script> 
+          var myVideo = document.getElementById("myVid");
+          function playVideo() { 
+          myVideo.play(); 
+          } 
+          function pauseVideo() { 
+          myVideo.pause(); 
+          } 
+          </script> 
+
+      
     </div>
 
     <div class="info-column">
