@@ -14,10 +14,10 @@
         "photo" : "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
       },
       {
-        "name" : "BarMymiao02",
-        "species" : "Cat",
-        "birthYear" : 2008,
-        "photo" : "https://tarek-bg.github.io/web/webtest/template/Handlebars/data/images/cat-3.jpg"
+        "name" : "aziz and dino",
+        "species" : "Dino",
+        "birthYear" : 7/9/2018,
+        "photo" : "https://tarek-bg.github.io/web/webtest/template/Handlebars/data/images/aziz and dino.webm"
       },  
       {
         "name" : "videos02",
