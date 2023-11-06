@@ -68,9 +68,8 @@ console.log("End here:data");
 */
 
 
-			open('GET', 'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json');
-		
-			onload = function() {
+			XMLHttpRequest.open('GET', 'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data.json');		
+			XMLHttpRequest.onload = function() {
   if (ourRequest.status >= 200 && ourRequest.status < 400) {
     var data = JSON.parse(ourRequest.responseText);
     createHTML(data);
