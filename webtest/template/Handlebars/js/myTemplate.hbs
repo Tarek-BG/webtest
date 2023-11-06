@@ -3,15 +3,13 @@
     <div class="photo-column">
       <img src="{{photo}}">
 
-
-          <button onclick="playVideo()" type="button">Play</button>
+      
+          <button onclick="playVideo()" type="button">video</button>
           <button onclick="pauseVideo()" type="button">Pause</button><br> 
-          <video id="myVid" width="400" height="200">
-          <source src="{{photo}}" type="video/mp4">
-            Sorry, your browser does not support HTML5 video.
+          <video src="{{photo}}" type="video/mp4" width="400" height="200">
           </video>
           <script> 
-          var myVideo = document.getElementById("myVid");
+          //var myVideo = document.getElementById("myVid");
           function playVideo() { 
           myVideo.play(); 
           } 
