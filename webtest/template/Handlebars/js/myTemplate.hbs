@@ -3,20 +3,19 @@
     <div class="photo-column">
       <img src="{{photo}}">
 
-      
-          <button onclick="playVideo()" type="button">video</button>
-          <button onclick="pauseVideo()" type="button">Pause</button><br> 
-          <video src="{{photo}}" type="video/mp4" width="400" height="200">
-          </video>
-          <script> 
-          //var myVideo = document.getElementById("myVid");
-          function playVideo() { 
-          myVideo.play(); 
-          } 
-          function pauseVideo() { 
-          myVideo.pause(); 
-          } 
-          </script> 
+      <video controls width="250">
+  <source src="/media/cc0-videos/flower.webm" type="video/webm" />
+
+  <source src="/media/cc0-videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/media/cc0-videos/flower.webm">WEBM</a>
+  or
+  <a href="/media/cc0-videos/flower.mp4">MP4</a>
+  video.
+</video>
+
+
 
       
     </div>
