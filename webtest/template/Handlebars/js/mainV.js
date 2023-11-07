@@ -6,7 +6,7 @@ ourRequest.open('GET', 'https://tarek-bg.github.io/web/webtest/template/Handleba
 ourRequest.onload = function() {
   if (ourRequest.status >= 200 && ourRequest.status < 400) {
     var data = JSON.parse(ourRequest.responseText);
-    createHTML(data);
+    createHTML(data);console.log(data);
   } else {
     console.log("We connected to the server, but it returned an error.");
   }
@@ -17,7 +17,7 @@ ourRequest.onerror = function() {
 };
 
 ourRequest.send();
-console.log(data);
+
 var template = Handlebars.compile(document.queryselector("#template").innerHTML);
 var filled = template(data);
 document.querySelector("output").innerHTML = filled;
