@@ -1,4 +1,4 @@
-var myTemplate = require("./myTemplate.hbs");
+//var myTemplate = require("./myTemplate.hbs");
 
 var ourRequest = new XMLHttpRequest();
 //ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/pets-data.json');
