@@ -17,6 +17,7 @@ ourRequest.onerror = function() {
 };
 
 ourRequest.send();
+
 var template = Handlebars.compile(document.queryselector("#template").innerHTML);
 var filled = template(data);
 document.querySelector("output").innerHTML = filled;
