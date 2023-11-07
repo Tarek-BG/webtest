@@ -22,8 +22,9 @@ var template = Handlebars.compile(document.queryselector("#template").innerHTML)
 var filled = template(data);
 document.querySelector("output").innerHTML = filled;
 
-
+/*
 function createHTML(petsData) {
   var petsContainer = document.getElementById("pets-container");
   petsContainer.innerHTML = myTemplate(petsData);
 }
+*/
