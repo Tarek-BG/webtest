@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Window<br></h1>
+<h3>Saisie<br>des Données</h3>
+ 
+<button onclick="openWin()">Open<br>"Saisie Data"</button>
+  <button onclick="viewWin()">Open<br>"view Data"</button>
+    <button onclick="printWin()">Open<br>"print Data"</button>
+<button onclick="closeWin()">Close<br>"close Data"</button>
+
+<script>
+let myWindow;
+
+function openWin() {
+  myWindow = window.open("https://script.google.com/macros/s/AKfycbwHjEpBDLLYYo1M6hfZvfQi0Squ4ad24zYHCMQ5mMc7yTTDtv54NLhMAfhATvaPLEH6/exec", "", "width=1000,height=700");
+}
+  function viewWin() {
+  myWindow = window.open("https://docs.google.com/spreadsheets/d/1o4iAmz3fynkSudDcL1LZusGwr3A24G80bouInMAmBac/preview?format=pdf", "", "width=1000,height=700");
+}
+function printWin() {
+  myWindow = window.open("https://docs.google.com/spreadsheets/d/1o4iAmz3fynkSudDcL1LZusGwr3A24G80bouInMAmBac/export?format=pdf", "", "width=20,height=7");
+}
+function closeWin() {
+  myWindow.close();
+}
+</script>
+
+</body>
+</html>
