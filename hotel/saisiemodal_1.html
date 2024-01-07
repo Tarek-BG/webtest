@@ -15,7 +15,7 @@
   <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_1">Open Date</button><br><br>
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal_2">Open Print</button><br><br>
-  <button type="button" class="btn btn-info btn-lg" onclick="saisie.html.printWin">Open<br>Print modal</button>
+  <button type="button" class="btn btn-info btn-lg" onclick="printWin()">Open<br>Print modal</button>
 
 
   <!-- Modal_1 -->
@@ -39,19 +39,16 @@
   </div> 
 
 
-
-  <!-- Modal_3 -->
-  <div class="modal fade" id="myModal_3" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <script src=saisie.html/printWin()></script>
-   </div>
-  </div>
-
-
-
 </div>
+
+
+<script>
+    let myWindow;
+    function printWin() {
+    myWindow = window.open("https://docs.google.com/viewer?url=https://docs.google.com/spreadsheets/d/1Rniu3Ve65fn1qJburf7lUVoMZciA7wnvAixPZiA1TNQ/export?format=pdf#size=7&fitw=true&gid=1716336778", "", "width=600,height=700");
+}
+</script>
+
 
 </body>
 </html>
