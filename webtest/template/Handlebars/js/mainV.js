@@ -1,4 +1,4 @@
-//var myTemplate = require("./myTemplate.hbs");
+var myTemplate = require("./myTemplate.hbs");
 
 var ourRequest = new XMLHttpRequest();
 //ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/pets-data.json');
@@ -22,9 +22,8 @@ var template = Handlebars.compile(document.queryselector("#template").innerHTML)
 var filled = template(data);
 document.querySelector("output").innerHTML = filled;
 
-/*
+
 function createHTML(petsData) {
   var petsContainer = document.getElementById("pets-container");
   petsContainer.innerHTML = myTemplate(petsData);
 }
-*/
