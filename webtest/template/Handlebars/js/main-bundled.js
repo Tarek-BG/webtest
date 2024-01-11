@@ -207,7 +207,7 @@ function appendContextPath(contextPath, id) {
 exports.__esModule = true;
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
-
+/* tarek a 3 changes node par nodemon */
 function Exception(message, nodemon) {
   var loc = nodemon && nodemon.loc,
       line = undefined,
