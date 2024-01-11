@@ -22,7 +22,7 @@
                   <div class="photo-column">
                     <h2>Photos</h2>
                     <img src="{{photo}}">
-              
+              <br>
                     <video controls width="250">
                         <source src="{{video}}" type="video/webm" />
                     </video>
@@ -35,7 +35,7 @@
                   <div class="info-column">
                     <h2>{{name}} <span class="species">({{species}})</span></h2>
               
-                    <p>Age: {{calculateAge birthYear}}</p>
+                    <p>Age.: {{calculateAge birthYear}}</p>
               
                     {{#if favFoods}}
                     <h4 class="headline-bar">Favorite Foodss</h4>
@@ -56,8 +56,8 @@
     </div>
   </div>
 
-  <!--script src="js/main-bundled.js"></script-->
-  <script src="js/mainV.js"></script>
+  <script src="js/main-bundled.js"></script>
+  <!--script src="js/mainV.js"></script-->
 
 </body>
 </html>
