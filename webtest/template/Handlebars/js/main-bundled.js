@@ -208,8 +208,8 @@ exports.__esModule = true;
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
 
-function Exception(message, node) {
-  var loc = node && node.loc,
+function Exception(message, nodemon) {
+  var loc = nodemon && nodemon.loc,
       line = undefined,
       column = undefined;
   if (loc) {
