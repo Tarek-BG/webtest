@@ -1,5 +1,5 @@
 function setup_helper(){
-    Handlebars.registerHelper("def",options =>{
+    Handlebars.registerHelper("def",options => {
         Handlebars.registerPartial(options.hash.name, options.fn());
         return;
     })
