@@ -21,7 +21,7 @@ h1 {
 	text-align: center;
 	color: #505961;
 }
-.character-list-container {
+.character-list-container {margin-left:20px;
 	width: 95%;
 	margin: 0 auto;
 }
