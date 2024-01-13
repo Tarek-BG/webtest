@@ -22,12 +22,12 @@ h1 {
 	color: #505961;
 }
 .character-list-container {
-	width: 75%;
+	width: 95%;
 	margin: 0 auto;
 }
 .character {border-radius: 30%;
 	background-color: #fff;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	overflow: hidden;
 	position: relative;
 }
