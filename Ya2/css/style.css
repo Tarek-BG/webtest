@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
-body {background-color: #DDD;
+body {background-color: #DDD;  border-radius: 30%;
 	font-size: 100%;
 	font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
 	line-height: 1.4;
