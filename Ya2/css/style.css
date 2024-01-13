@@ -39,11 +39,11 @@ h1 {
 	margin-right: 20px;
 }
 .character-details {
-	float: left;
-	margin: 10px 0;
+	float: center;
+	margin: 40px 0;
 }
 .character-bio-container {
-	background: #fff;
+	background: #3bcf3266;
 	padding: 10px;
 }
 .button {
