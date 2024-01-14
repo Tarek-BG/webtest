@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
-body {background-color: #badb13;  
+body { 
 	font-size: 100%;
 	font-family: 'Tangerine', serif; text-shadow: 4px 4px 4px #aaa;
 	line-height: 1.4;
@@ -25,7 +25,7 @@ h1 {
 	width: 95%;
 	margin: 0 auto;
 }
-.character {border-radius: 30%;
+.character {border-radius: 10%;
 	background-color: #fff;
 	margin-bottom: 20px;
 	overflow: hidden;
