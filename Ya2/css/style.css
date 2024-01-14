@@ -8,7 +8,7 @@ body {
 	font-family: 'Tangerine', serif; text-shadow: 4px 4px 4px #aaa;
 	line-height: 1.4;
 	padding: 50px;
-	background-color: #eaeaea;
+	background-color: #3c27c9;
 }
 h1, h2, h3 {
 	font-weight: 900;
@@ -32,7 +32,7 @@ h1 {
 	position: relative;
 }
 .character *:not(.button) {
-	color: #505961;
+	color: #e61717;
 }
 .character img {  border-radius: 50%;z-index: -1;
 	float: left;
