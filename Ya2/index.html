@@ -9,13 +9,14 @@
 </head>
 <body>
 	
-	<h1>Ya2 ياتو</h1><!--img  src="images/{{shortCode}}.jpg"-->
+	<h1>Ya2 ياتو</h1>
 	<ul class="character-list-container"></ul>
 
 
 	<script id="character-template" type="text/x-handlebars-template">
 		{{#each characters}}
 		<li class="character">
+			<img  src="images/{{shortCode}}.jpg">
 			<img  src="{{me2}}">
 			<div class="character-details">
 				<h2>{{name}}</h2>
