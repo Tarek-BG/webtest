@@ -25,10 +25,9 @@ h1 {
 	width: 95%;
 	margin: 0 auto;
 }
-.character {border-radius: 28px;
-	background: #e0e0e0;
-	box-shadow: inset -21px 21px 25px #5a5a5a,
-				inset 21px -21px 25px #ffffff;
+.character {border-radius: 10%;
+	background-color: #d6f10d;
+	margin-bottom: 20px;
 	overflow: hidden;
 	position: relative;
 }
