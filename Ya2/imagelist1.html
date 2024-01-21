@@ -15,16 +15,28 @@ iframe.flip-embedded .flip-entry-title {
   visibility:hidden !important;
 }
 </style>
-
+<script>
+  function myFunction() {
+    alert("Page is loaded");
+  }
+  </script>
 </head>
-<body>
+<body onload="myFunction()">
 <!--https://www.youtube.com/watch?v=MAPIlu3qOGw -->
-<h1>The Property</h1>
+<h1>The z-index Property</h1>
 
 <img src="https://lh3.googleusercontent.com/pw/ABLVV844_j3Lqwj3ShQiVb1EvH7J3PaY4L5kwYWYYu5kmHuEpvUOdS1kawXX7eBZ7rXIEc_WbvziuYonN739geWLBpUE6-yaYNjDoqRbY4976MfLmLP30Q=s115-p-k" width="100" height="140">
 
 <p>Because the image has a z-index of -1, it will be placed behind the heading.</p>
 <!--script>document.write('<script src="./js/2frame.js"></script>')</script-->
+
+<script>
+  document.write("<h2>Hello World!</h2><p>Have a nice day!</p>");
+//  document.querySelector('iframe').contentDocument.body.style.backgroundColor = '#1e1e2d';
+  var disp=document.querySelector('iframe').contentDocument.getElementsByClassName(flip-embedded.flip-entry-title);
+  disp.display='none'
+
+  </script>
 
 <div class="flip-embedded.flip-entry-title" style="display: none "></div>
 

@@ -1,5 +1,5 @@
 var iframes = document.getElementsByTagName('iframe');
-var classToHide = 'flip-entry-title';
+var classToHide = 'flip-embedded .flip-entry-title';
 for (var i = 0; i < iframes.length; i++) {
 
 try {
