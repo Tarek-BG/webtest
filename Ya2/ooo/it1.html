@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+console.log("Hello world!");
+</script>
+
+<iframe id="myframe" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid" width="300px" height="600px" frameborder="0"> </iframe>
+<p>Click the button to change the background color of the document contained in the iframe.</p>
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+console.log("Hello world!  fd");
+
+function myFunction() {
+
+  var x = document.getElementById("myframe");
+  var y = (x.contentWindow || x.contentDocument);
+  if (y.document)y = y.document;
+     
+   console.log(x);
+  y.flip-embedded.flip-contents.flip-entries.flip-entry.flip-entry-info.a.flip-entry-visual.flip-entry-visual-card.flip-entry-thumb.border-radius = "30px";
+}
+console.log("Hello world!  f");
+</script>
+
+
+
+
+
+</body>
+</html>
