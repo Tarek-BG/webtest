@@ -11,11 +11,11 @@
  
  <body> 
 
-   <iframe id="frameID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
-   </iframe> 
+   <object id="frameID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
+   </object> 
  
    const target = {
-    "<iframe id="frameID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
+    myframe="<iframe id="xframeID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
     </iframe> "
   };
   
@@ -25,7 +25,7 @@
 
 
 
-   <a href="#"onclick="getIframeContent('proxy1.frameID');"> 
+   <a href="#"onclick="getIframeContent('frameID');"> 
    Get the content of Iframe 
    </a> 
 
