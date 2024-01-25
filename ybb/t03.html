@@ -10,7 +10,7 @@
  </head> 
  
  <body> 
-   <iframe id="frameID" src="ContentOfFrame.html"> 
+   <iframe id="frameID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"> 
    </iframe> 
  
    <a href="#"onclick="getIframeContent('frameID');"> 
@@ -19,8 +19,7 @@
  
    <script> 
    function getIframeContent(frameID) { 
-        var frameObj = 
-        document.getElementById(frameID); 
+        var frameObj =document.getElementById(frameID); 
         var frameContent = frameObj.contentWindow.document.body.innerHTML; 
            alert("frame content : " + frameContent); 
    } 
