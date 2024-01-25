@@ -17,7 +17,44 @@
    <a href="#"onclick="getIframeContent('frameID');"> 
    Get the content of Iframe 
    </a> 
- 
+   
+   <script>
+    let storageOrUndefined;
+  
+    try {
+      storageOrUndefined = window.localStorage;
+    } catch (e) {
+      storageOrUndefined = undefined;
+    }
+  
+    const isIframe = window !== window.top;
+   
+    if (isIframe) {
+        const lsProxy = new Proxy(
+        {},
+        {
+          get: (_, prop, __) => (argument) => {
+            if (!storageOrUndefined) {
+              return null;
+            }
+  
+            try {
+              return storageOrUndefined[prop](argument);
+            } catch (e) {
+              return null;
+            }
+          },
+        }
+      );
+  
+      Object.defineProperty(window, "localStorage", {
+        value: lsProxy,
+        configurable: true,
+        enumerable: true,
+        writable: false,
+      });
+    }
+  </script>
    <script> 
    function getIframeContent(frameID) { 
         var frameObj =document.getElementById(frameID); 
