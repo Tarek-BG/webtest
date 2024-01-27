@@ -40,8 +40,9 @@
 
 // find out the properties present in obj
 const propertyNames = Object.getOwnPropertyNames(obj);
+const propertyN = Object.getOwnPropertyDescriptor(obj).value;
 
-console.log(propertyNames);
+console.log(propertyNames,propertyN);
 }
 
    
