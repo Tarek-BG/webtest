@@ -33,20 +33,15 @@
    <script>
    
    function getIframeContent(frameID) { 
-    var obj2=Object.getOwnPropertyNames.name;
-    localStorage.setItem("id",JSON.stringify(obj2));
+   // var obj2=Object.getOwnPropertyNames.name;
+   // localStorage.setItem("id",JSON.stringify(obj2));
 
-       // var frameObj =document.getElementById(frameID); 
-       // var frameContent = frameObj.contentWindow.document.body.innerHTML; 
-       //    alert("frame content : " + frameContent); 
+    const obj = frameID
 
-      // var keys = Object.keys(frameID);
+// find out the properties present in obj
+const propertyNames = Object.getOwnPropertyNames(obj);
 
-//for (var j=0; j < keys.length; j++) {
-
- // var obj00=Object[keys[j]].properties();
-  // console.log(_.keys(obj00)); 
-//localStorage.setItem("id",JSON.stringify();
+console.log(propertyNames);
 }
 
    
