@@ -38,6 +38,14 @@
        // var frameObj =document.getElementById(frameID); 
        // var frameContent = frameObj.contentWindow.document.body.innerHTML; 
        //    alert("frame content : " + frameContent); 
+
+       var keys = Object.keys(frameID);
+
+for (var j=0; j < keys.length; j++) {
+  localStorage.setItem("id",JSON.stringify(Object[keys[j]].properties()));
+
+}
+
    } 
    </script> 
  </body> 
