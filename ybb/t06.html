@@ -25,15 +25,19 @@
    <script>
    
    function getIframeContent(frameID) { 
+
 // creating an object
-const myObjInfo = Object.objID
+const myCountryInfo = {
+  country: 'India',
+  capital: 'New Delhi'
+}
 
 // stringifying the myCountryInfo object and 
 // storing it in the localStorage
-localStorage.setItem('myobjInfo', JSON.stringify(myobjInfo))
+localStorage.setItem('myCountryInfo', JSON.stringify(myCountryInfo))
 
 // retrieving localStorage data in HTML
-document.getElementById("content").innerHTML = localStorage.getItem("myobjInfo");
+document.getElementById("content").innerHTML = localStorage.getItem("myCountryInfo");
 console.log("a");
 }
 
