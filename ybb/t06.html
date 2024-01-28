@@ -1,0 +1,52 @@
+	<!--https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy -->
+  <!--https://youtu.be/1XfwTJhEHcs -->
+ <!DOCTYPE html> 
+ <html> 
+ 
+ <head> 
+   <title> 
+   How to get HTML content of 
+   an iFrame using javascript? 
+   </title> 
+ </head> 
+ 
+ <body> 
+
+   <object id="objID" data="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
+   </object> 
+ 
+   const target = {
+    myframe="<iframe id="xframeID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
+    </iframe> "
+  };
+  
+  const handler1 = {};
+  
+  const proxy1 = new Proxy(target, handler1);
+
+
+
+   <a href="#"onclick="getIframeContent('objID');"> 
+   Get the content of Iframe object
+   </a> 
+
+   <script>
+   
+   function getIframeContent(frameID) { 
+// creating an object
+const myObjInfo = Object.objID
+
+// stringifying the myCountryInfo object and 
+// storing it in the localStorage
+localStorage.setItem('myobjInfo', JSON.stringify(myobjInfo))
+
+// retrieving localStorage data in HTML
+document.getElementById("content").innerHTML = localStorage.getItem("myobjInfo");
+console.log(propertyNames);
+}
+
+   
+   </script> 
+ </body> 
+ 
+ </html> 
