@@ -15,19 +15,11 @@
    <object id="objID" data="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
    </object> 
  
-   const target = {
-    myframe="<iframe id="xframeID" src="https://drive.google.com/embeddedfolderview?id=1t87NC-qN2mxotqHNZL6Gtt0qTS5SelAP#grid"crossorigin="anonymous"> 
-    </iframe> "
-  };
-  
-  const handler1 = {};
-  
-  const proxy1 = new Proxy(target, handler1);
 
 
 
    <a href="#"onclick="getIframeContent('objID');"> 
-   Get the content of Iframe object
+   Get the content of object
    </a> 
 
    <script>
@@ -42,7 +34,7 @@ localStorage.setItem('myobjInfo', JSON.stringify(myobjInfo))
 
 // retrieving localStorage data in HTML
 document.getElementById("content").innerHTML = localStorage.getItem("myobjInfo");
-console.log(propertyNames);
+console.log("a");
 }
 
    
