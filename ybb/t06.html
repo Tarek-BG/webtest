@@ -32,9 +32,22 @@
 
    <pre>dump(myObject, true); // opens a dump window displaying key/value types of myObject<br />dump([123,456,789], false); // opens a dump window not displaying key/value types of the array passed<br />dump('string value', false); // opens a dump window showing the string value</pre>
    <script>
-   
-   function getIframeContent(frameID) { 
+ 
+ window.onload = function() {
+  //fonction creat dump
+var btn1 = document.getElementById('oDump');
+var btn2 = document.getElementById('aDump');
+var btn3 = document.getElementById('fDump');
+var btn4 = document.getElementById('sDump');
+var showTypes = document.getElementById('showTypes');
+btn1.onclick = function() {dump(obj, showTypes.checked);};
+btn2.onclick = function() {dump(['asf','asfsaf',46346,{'key':'value'},d,greet,/\s/,null,document.getElementsByTagName('p'),null,btn1], showTypes.checked);};
+btn3.onclick = function() {dump(greet, showTypes.checked);};
+btn4.onclick = function() {dump('some test text...', showTypes.checked);};
+}; 
 
+
+   function getIframeContent(frameID) { 
 // creating an object
 const myCountryInfo = Object.frameID
 
