@@ -5,7 +5,7 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", function() {
   var ourRequest = new XMLHttpRequest();
 //  ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-' + pageCounter + '.json');
-  ourRequest.open('GET', 'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data' + '.json');
+  ourRequest.open('GET', 'https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data1.json');
 
   ourRequest.onload = function() {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
