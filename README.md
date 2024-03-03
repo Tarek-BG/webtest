@@ -1,6 +1,4 @@
-  <head><link rel = "icon" href = "https://tarek-bg.github.io/web/bookhtml/img/iconHasdrubalV2_15p.gif" 
-        type = "image/x-icon">
-  </head>
+ <head><link rel = "icon" href = "https://tarek-bg.github.io/web/bookhtml/img/iconHasdrubalV2_15p.gif"  type = "image/x-icon"> </head>
 # my.WEB
 new website test
 
