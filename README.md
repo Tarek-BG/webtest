@@ -1,3 +1,6 @@
+<link rel = "icon" href = "bookhtml/img/iconHasdrubalV2_15p.gif" 
+        type = "image/x-icon">
+
 # testweb
 new website test
 
