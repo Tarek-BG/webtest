@@ -1,0 +1,156 @@
+
+/* remove padding, margin and any touch action or delay */
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+
+	/* make body full height for backgrounds to appear */
+	height: 100%;
+}
+
+body {
+	background: black;		/* overridden by JS in preview mode */
+	color: white;
+}
+
+html, body, canvas {
+	touch-action-delay: none;
+	touch-action: none;
+}
+
+canvas, .c3htmlwrap {
+	position: absolute;
+}
+
+.c3htmlwrap {
+	contain: strict;
+}
+
+.c3overlay {
+	pointer-events: none;
+}
+
+.c3htmlwrap > * {
+	pointer-events: auto;
+}
+
+/* HACK - work around elements being selectable only in iOS WKWebView for some reason */
+html[ioswebview] .c3htmlwrap,
+html[ioswebview] canvas {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+html[ioswebview] .c3htmlwrap > * {
+	-webkit-user-select: auto;
+	user-select: auto;
+}
+
+/* loading message while loading in preview mode */
+.previewLoadingMessage {
+	display: block;
+	width: 12em;
+	font-family: system-ui, -apple-system, sans-serif;
+	font-size: 2em;
+	color: #333;
+	background-color: #eee;
+	padding: 0.3em;
+	border: 0.2em solid #888;
+	border-radius: 0.5em;
+	margin: 1em auto;
+	text-align: center;
+	animation: loaderFadeIn 1s;
+}
+
+/* remain invisible for first 500ms, so loader never appears if
+   loading very quickly */
+@keyframes loaderFadeIn {
+	0% {
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+/* debugger inspect element */
+#inspectOutline {
+	position: absolute;
+	border: 2px dotted red;
+	overflow: hidden;
+	font-size: 8pt;
+	font-family: system-ui, sans-serif;
+	color: #444;
+	pointer-events: none;
+	animation: flash 2s linear 0s infinite;
+	background-color: rgba(255, 215, 0, 0.25);
+	box-sizing: border-box;
+}
+
+@keyframes flash {
+	0%, 75%, 100% {opacity: 1;}
+	87% {opacity: 0.25;}
+}
+
+/* For exporting to video */
+body.exportingToVideo {
+	text-align: center;
+}
+
+body.exportingToVideo canvas {
+	position: static;
+	max-width: 100%;
+	height: 22em;
+}
+
+#exportToVideoMessage {
+	font-family: system-ui, sans-serif;
+}
+
+/* bbcode styles */
+.bbCodeH1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.bbCodeH2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.bbCodeH3 {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.bbCodeH4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.bbCodeItem::before {
+	content: " • ";
+}
+
+/* For text icons converted to HTML: size the height to the line height
+   preserving the aspect ratio. Also add position: relative as that allows
+   just adding a 'top' style for the iconoffsety style. */
+.c3-text-icon {
+	height: 1em;
+	width: auto;
+	position: relative;
+}
+
+.c3-screen-reader-text {
+	position: absolute;
+	width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
