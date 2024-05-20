@@ -15,7 +15,7 @@ block comment on Windows, use Shift + Alt + A
       </a>
 
       <br>
-
+<br><a href="https://tarek-bg.github.io/web/archi/HAM052024.zip" download>Download les Pages</a>
     <br>
 
 
