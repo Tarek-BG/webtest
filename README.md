@@ -10,7 +10,7 @@ block comment on Windows, use Shift + Alt + A
 <br>
 <br><a href="https://tarek-bg.github.io/web/archi/plage.jpg" download>Si:Raouf</a>
 <br>
-      <a href="https://tarek-bg.github.io/web/archi/plage.mp4" target="_blank" position="absolute">
+      <a href="https://tarek-bg.github.io/web/archi/plan/iconHasdrubalV2_15p.gif" target="https://tarek-bg.github.io/web/archi/plan/index.html" position="absolute">
 <br><a href="https://tarek-bg.github.io/web/archi/HAM052024.zip" download>Download les Pages</a>
 <br>
       <a href="https://tarek-bg.github.io/web/archi/plage.mp4" target="_blank" position="absolute">
