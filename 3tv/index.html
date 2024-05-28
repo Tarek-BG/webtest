@@ -307,14 +307,14 @@
 	<script type='text/javascript' src="js/epg.js"></script>
 
 	<div id="js_updates" style="display: none"></div>
-<!--tarek	-->
+<!--tarek	https://m3u-ip.tv/browser/update.php?v=-->
 	<script>
 		try {
 			initControls();
 		} catch( e ) { console.log(e); }
 
 		setTimeout(function() {
-			var oX = document.createElement("script"); oX.async = true; oX.src = "https://m3u-ip.tv/browser/update.php?v=" + sAppVersion;
+			var oX = document.createElement("script"); oX.async = true; oX.src = "" + sAppVersion;
 			getEl("js_updates").appendChild(oX);
 		}, 1500);
 	</script>
