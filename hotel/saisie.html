@@ -18,6 +18,9 @@
         <!--Printali      https://docs.google.com/spreadsheets/d/1SIkEgk7eK6nxGQwq0YVVEwTI0fulBQ5CxaKWUCOwlfU  -->
   <br>       
 <button onclick="closeWin()">Close<br>"..............close Data............."</button>
+<br>      
+<button onclick="printWin2()">Open<br>"Print Data"</button>     
+    <!--Form   https://docs.google.com/spreadsheets/d/1SIkEgk7eK6nxGQwq0YVVEwTI0fulBQ5CxaKWUCOwlfU/edit -->
 
 <script>
 let myWindow;
@@ -34,8 +37,11 @@ function printWin() {
 function closeWin() {
   myWindow.close();
   open("index.html","",target=_self );
-
 }
+function printWin2() {
+  myWindow = window.open("https://docs.google.com/viewer?url=https://docs.google.com/spreadsheets/d/1SIkEgk7eK6nxGQwq0YVVEwTI0fulBQ5CxaKWUCOwlfU/export?format=pdf#size=7&fitw=true&gid=1716336778", "", "width=600,height=700");
+}
+
 </script>
 
 </body>
