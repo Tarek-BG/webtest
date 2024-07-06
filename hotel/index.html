@@ -80,7 +80,7 @@ same</a>
     <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwvBf7cUyNjlaQtfQSqJSdsk4JdipRVRBN-YT7aulgJTjlKUU6fEAgFb0MjcWvqJsRf6QXwl0uV-Fs/pubhtml?gid=394233348&single=true" 
               class="w3-bar-item w3-button">Recap Kantaoui</a>
               <!--<iframe  width="1250" height="1409" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwvBf7cUyNjlaQtfQSqJSdsk4JdipRVRBN-YT7aulgJTjlKUU6fEAgFb0MjcWvqJsRf6QXwl0uV-Fs/pubhtml?gid=394233348&single=true"></iframe>-->
-    <a href="saisie.html" class="w3-bar-item w3-button">Saisie</a>
+    <a  class="w3-bar-item w3-button" onclick="openWinsaisie()">Saisie</a>
     <a href="saisiemodal.html" class="w3-bar-item w3-button">Saisie Modal</a>
   </div>
   <div class="w3-dropdown-click">
@@ -206,6 +206,16 @@ function scrollFunction() {
     document.getElementById("header").style.scale = "100%";
   }
 }
+
+let myWindowSS;
+
+function openWinsaisie() {
+  myWindowSS = window.open("saisie.html", "", "width=1000,height=700");
+}
+
+
+
+
 </script>
 
 <!-- 00--></div>
