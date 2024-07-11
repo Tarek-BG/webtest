@@ -4,8 +4,10 @@
 
 <h1>Window<br></h1>
 <h3>Saisie<br>des Données</h3>
-      <!-- Data   https://docs.google.com/spreadsheets/d/1x7esMFvsQrwg-bhA4pFYmstU-Dw4IAAMj8eOnC_a0tA -->
-    <button onclick="openWin()">Open<br>  "..............Saisie Data............"</button>
+<!-- Data   https://docs.google.com/spreadsheets/d/1x7esMFvsQrwg-bhA4pFYmstU-Dw4IAAMj8eOnC_a0tA -->
+      <button onclick="openWin()">Open<br>  "..............Saisie Data............"</button>
+<!-- Data   https://script.google.com/u/0/home/projects/1Dnuk_ZCnWLsEl1ED-434hmkwFep90WoETg12njjhmdp_rHMuTmgNDjkC/edit -->
+    <button onclick="openWin2()">Open<br>  "..............Saisie Data............"</button>
         <!--Html    wronghttps://docs.google.com/spreadsheets/d/1o4iAmz3fynkSudDcL1LZusGwr3A24G80bouInMAmBac   -->        
         <!--prg     https://script.google.com/home/projects/1ITu9AyzOOEd9CHgCu2qzHikXURuZMKbN28_ffkaYy52yMDLcQQP1Sk1L/edit   -->        
 
@@ -27,6 +29,9 @@ let myWindow;
 
 function openWin() {
   myWindow = window.open("https://script.google.com/macros/s/AKfycbwHjEpBDLLYYo1M6hfZvfQi0Squ4ad24zYHCMQ5mMc7yTTDtv54NLhMAfhATvaPLEH6/exec", "", "top=0,left=250,width=1000,height=700");
+}
+function openWin2() {
+  myWindow = window.open("https://script.google.com/macros/s/AKfycbyrPhVRUFRhnrutyRIvNO5at9BTp4h49wL16_4whlTU/dev", "", "top=0,left=250,width=1000,height=700");
 }
   function viewWin() {myWindow.close();
   myWindow = window.open("https://docs.google.com/forms/d/e/1FAIpQLSdrDtiCVlA1ImX-nEhLSGyjv3qoFGKXlPeC__3vX4ME3oFy9g/viewform? &edit=false", "", "top=0,left=250,width=400,height=700");
