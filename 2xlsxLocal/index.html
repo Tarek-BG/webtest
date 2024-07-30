@@ -1,32 +1,57 @@
 https://www.npmjs.com/package/read-excel-file?activeTab=readme
 https://www.youtube.com/watch?v=cSnO34j3MWo
+https://bossanova.uk/jspreadsheet/v4/cases/themes
 
 <html>
 <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
-<link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css" />
 <script src="https://jsuites.net/v4/jsuites.js"></script>
 <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+<link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css" />
+
+<div id="spreadsheet" ></div>
  
-<div id="spreadsheet1"></div>
- 
-<p><button id='download'>Export my spreadsheet as CSV</button></p>
+<input type="button" value="Add new tab" onclick="add()" style="width:150px;">
+<input type="button" value="Download selected tab" onclick="download()" style="width:150px;">
  
 <script>
-var mySpreadsheet = jspreadsheet(document.getElementById('spreadsheet1'), {
-    csv:'2xlsxLocal/d_list_gen_pers_mat.csv',
-    csvHeaders:true,
-    tableOverflow:true,
-    columns: [
-        { type:'text', width:300 },
-        { type:'text', width:80 },
-        { type:'dropdown', width:120, source:['England','Wales','Northern Ireland','Scotland'] },
-        { type:'text', width:120 },
-        { type:'text', width:120 },
-     ]
-});
+/**
+ * Add new worksheet
+ */
+var add = function() {
+    var sheets = [];
  
-document.getElementById('download').onclick = function () {
-    mySpreadsheet.download();
+    sheets.push({
+        sheetName: prompt('Create a new tab', 'New tab ' + document.getElementById('spreadsheet').jexcel.length),
+        minDimensions:[10,10]
+    });
+ 
+    jspreadsheet.tabs(document.getElementById('spreadsheet'), sheets);
 }
+ 
+/**
+ * Download current worksheet
+ */
+var download = function() {
+    // Get selected tab
+    var worksheet = document.getElementById('spreadsheet').children[0].querySelector('.selected').getAttribute('data-spreadsheet');
+    // Download
+    document.getElementById('spreadsheet').jexcel[worksheet].download();
+}
+ 
+/**
+ * Create worksheet container with two jexcel instances
+ */
+var sheets = [
+    {
+        sheetName: 'Countries',
+        minDimensions:[10,10]
+    },
+    {
+        sheetName: 'Cities',
+        minDimensions:[10,10]
+    }
+];
+ 
+jspreadsheet.tabs(document.getElementById('spreadsheet'), sheets);
 </script>
 </html>
