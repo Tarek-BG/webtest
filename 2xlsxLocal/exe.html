@@ -16,11 +16,11 @@
     <script type="text/javascript" language="javascript">
         function RunFile() {
 		WshShell = new ActiveXObject("WScript.Shell");
-		WshShell.Run("%windir%\system32\notepad.exe", 1, false);
+		WshShell.Run("notepad.exe", 1, false);    //%windir%\system32\notepad.exe
         }
     </script>
 </head>
 <body>
-	<input type="button" value="Run Notepad" onclick="RunFile();"/>
+	<input type="button" value="Run Notepad notepad.exe" onclick="RunFile();"/>
 </body>
 </html>
