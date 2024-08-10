@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      google.script.run.withSuccessHandler(onSuccess)
+          .getSomeData();
+    
+      function onSuccess(data) {
+        var div = document.getElementById('output');
+        var list = document.createElement('ul');                 // Create a <li> node
+        
+        for(var i = 0; i < data.length; i++){
+            var item = document.createElement('li');
+            item.appendChild(document.createTextNode(data[i])); 
+            list.appendChild(item);
+        }
+        div.appendChild(list);
+        
+      }
+    </script>
+  </head>
+  <body>
+    <div id="output">
+    </div>
+  </body>
+</html>
