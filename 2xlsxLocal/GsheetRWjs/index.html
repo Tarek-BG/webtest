@@ -6,8 +6,22 @@
 <head>
 </head>
 <body>
+    <input type="file" id="input" />
 
-<script> </script>
+
+
+    <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+
+    <script>
+      var input = document.getElementById('input')
+      input.addEventListener('change', function() {
+        readXlsxFile(input.files[0]).then(function(rows) {
+          // `rows` is an array of rows
+          console.log(rows);
+          // each row being an array of cells.
+        })
+      })
+    </script>
 
 </body>
 </html>
