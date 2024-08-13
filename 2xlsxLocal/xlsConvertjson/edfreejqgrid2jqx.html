@@ -49,7 +49,7 @@
 	$(function () {
 		"use strict";
 		
-		var mydata = jsondata,
+		var mydata = JSON.stringify(rowObject,undefined,4),
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
