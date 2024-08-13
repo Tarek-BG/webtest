@@ -25,7 +25,7 @@ document.getElementById('button').addEventListener("click", () => {
               let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
               console.log(rowObject);
               document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
-        // console.log(jsondata);
+         console.log(jsondata);
             });
         }
     }
