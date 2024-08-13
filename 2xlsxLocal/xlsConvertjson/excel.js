@@ -23,7 +23,7 @@ document.getElementById('button').addEventListener("click", () => {
         // console.log(workbook);
          workbook.SheetNames.forEach(sheet => {
               let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
-              console.log(rowObject);
+             // console.log(rowObject);
               document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
          console.log(jsondata);
             });
