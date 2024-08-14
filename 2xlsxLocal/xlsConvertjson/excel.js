@@ -27,9 +27,9 @@ document.getElementById('button').addEventListener("click", () => {
               document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
          console.log(JSON.stringify(rowObject,undefined,4));
 
-         export const WordList = JSON.stringify(rowObject,undefined,4);
-         console.log("JSON.stringify(rowObject,undefined,4)") ;
-         console.log(WordList) ; 
+ //        export const WordList = JSON.stringify(rowObject,undefined,4);
+ //        console.log("JSON.stringify(rowObject,undefined,4)") ;
+ //        console.log(WordList) ; 
             });
         }
     }

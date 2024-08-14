@@ -41,69 +41,97 @@
 		$.jgrid.useJSON = true;
 	</script>
 	<script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
-	<script>
 
-import { WordList } from "./excel.js";
-console.log(WordList);
+	<script>	import { WordList } from "./excel.js";
+				console.log(WordList);</script>	
+
+<script>
+
 	//<![CDATA[
 	/*global $ */
 	/*jslint browser: true */
 	$(function () {
 		"use strict";
 		
-		var mydata = [
-    {
-        "Matricule": "000906",
-        "Nom & prénom": " CHOUCHANI FATHIA",
-        "Qualification": " ASSISTANT CHEF DE ",
-        "Dt naissance": " 17/08/1964",
-        "Etat civil": "Celibataire",
-        "CIN": "03733207",
-        "Date Embauche": " 16/03/1990",
-        "Service": " RECEPTION",
-        "Grade": "S2",
-        "ECH": 9,
-        "S.Base": 1182.12
-    },
-    {
-        "Matricule": "000979",
-        "Nom & prénom": " BOUFARES ADEL",
-        "Qualification": " CHAUFFEUR",
-        "Dt naissance": " 06/06/1971",
-        "Etat civil": "Marié",
-        "CIN": "02999145",
-        "Date Embauche": " 24/07/1991",
-        "Service": " ECONOMAT",
-        "Grade": "P1",
-        "ECH": 13,
-        "S.Base": 1167.79
-    },
-    {
-        "Matricule": "000994",
-        "Nom & prénom": " ABDALLAH ABDELFATTAH",
-        "Qualification": " 1ERE MAITRE D'HOTEL",
-        "Dt naissance": " 31/12/1967",
-        "Etat civil": "Marié",
-        "CIN": "02983694",
-        "Date Embauche": " 02/06/1989",
-        "Service": " RESTAURANT",
-        "Grade": "S1",
-        "ECH": 9,
-        "S.Base": 1287.729
-    },
-    {
-        "Matricule": "001129",
-        "Nom & prénom": " BRAHIM KAMEL",
-        "Qualification": " CHEF DES BARS PRINCIPAL",
-        "Dt naissance": " 02/10/1968",
-        "Etat civil": "Marié",
-        "CIN": "05502593",
-        "Date Embauche": " 01/03/1992",
-        "Service": " BARS",
-        "Grade": "S1",
-        "ECH": 9,
-        "S.Base": 1287.729
-    }],
+		var mydata = [[
+                    {
+                        "Matricule": "000906",
+                        "Nom & prénom": " CHOUCHANI FATHIA",
+                        "Qualification": " ASSISTANT CHEF DE ",
+                        "Dt naissance": " 17/08/1964",
+                        "Etat civil": "Celibataire",
+                        "CIN": "03733207",
+                        "Date Embauche": " 16/03/1990",
+                        "Service": " RECEPTION",
+                        "Grade": "S2",
+                        "ECH": 9,
+                        "S.Base": 1182.12
+                    },
+                    {
+                        "Matricule": "000979",
+                        "Nom & prénom": " BOUFARES ADEL",
+                        "Qualification": " CHAUFFEUR",
+                        "Dt naissance": " 06/06/1971",
+                        "Etat civil": "Marié",
+                        "CIN": "02999145",
+                        "Date Embauche": " 24/07/1991",
+                        "Service": " ECONOMAT",
+                        "Grade": "P1",
+                        "ECH": 13,
+                        "S.Base": 1167.79
+                    },
+                    {
+                        "Matricule": "000994",
+                        "Nom & prénom": " ABDALLAH ABDELFATTAH",
+                        "Qualification": " 1ERE MAITRE D'HOTEL",
+                        "Dt naissance": " 31/12/1967",
+                        "Etat civil": "Marié",
+                        "CIN": "02983694",
+                        "Date Embauche": " 02/06/1989",
+                        "Service": " RESTAURANT",
+                        "Grade": "S1",
+                        "ECH": 9,
+                        "S.Base": 1287.729
+                    },
+                    {
+                        "Matricule": "001129",
+                        "Nom & prénom": " BRAHIM KAMEL",
+                        "Qualification": " CHEF DES BARS PRINCIPAL",
+                        "Dt naissance": " 02/10/1968",
+                        "Etat civil": "Marié",
+                        "CIN": "05502593",
+                        "Date Embauche": " 01/03/1992",
+                        "Service": " BARS",
+                        "Grade": "S1",
+                        "ECH": 9,
+                        "S.Base": 1287.729
+                    },
+                    {
+                        "Matricule": "001151",
+                        "Nom & prénom": " SAHRAOUI SHEHRAZADE",
+                        "Qualification": " CHEF DE RANG",
+                        "Dt naissance": " 12/08/1969",
+                        "Etat civil": "Marié",
+                        "CIN": "02761727",
+                        "Date Embauche": " 10/07/1992",
+                        "Service": " RESTAURANT",
+                        "Grade": "S2",
+                        "ECH": 12,
+                        "S.Base": 1270.524
+                    },
+                    {
+                        "Matricule": "001180",
+                        "Nom & prénom": " BEN FREDJ ABDELAZIZ",
+                        "Qualification": " CHEF DE BRIGADE DE BAR",
+                        "Dt naissance": " 09/11/1972",
+                        "Etat civil": "Marié",
+                        "CIN": "05518711",
+                        "Date Embauche": " 08/09/1992",
+                        "Service": " BARS",
+                        "Grade": "S2",
+                        "ECH": 11,
+                        "S.Base": 1241.056
+                    }],
 			$grid = $("#list"),
 			initDateEdit = function (elem) {
 				$(elem).datepicker({
