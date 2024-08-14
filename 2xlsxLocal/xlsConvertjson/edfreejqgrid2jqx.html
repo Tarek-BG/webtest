@@ -123,12 +123,12 @@ console.log(WordList);
 
 		$grid.jqGrid({
 			data: mydata,
-			colNames: ["", "Client", "Date", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
+			colNames: ["", "Nom & prénom","Qualification", "Dt naissance", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
 			colModel: [
 				{ name: "act", template: "actions" },
-				{ name: "name", align: "center", width: 92, editrules: {required: true} },
-				{ name: "invdate", width: 72, align: "center", sorttype: "date", frozen: true,
-					formatter: "date", formatoptions: { newformat: "d-M-Y", reformatAfterEdit: true }, datefmt: "d-M-Y",
+				{ name: "Nom & prénom", align: "center", width: 150, editrules: {required: true} },
+				{ name: "Qualification", align: "center", width: 150, editrules: {required: true} },
+				{ name: "Dt naissance", width: 72, align: "center", sorttype: "date", frozen: true,					formatter: "date", formatoptions: { newformat: "d-M-Y", reformatAfterEdit: true }, datefmt: "d-M-Y",
 					editoptions: { dataInit: initDateEdit },
 					searchoptions: { sopt: ["eq", "ne", "lt", "le", "gt", "ge"], dataInit: initDateSearch } },
 				{ name: "amount", width: 56, template: "number" },
