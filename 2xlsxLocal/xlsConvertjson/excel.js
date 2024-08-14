@@ -26,6 +26,8 @@ document.getElementById('button').addEventListener("click", () => {
              // console.log(rowObject);
               document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject,undefined,4)
          console.log(JSON.stringify(rowObject,undefined,4));
+
+         export const WordList = JSON.stringify(rowObject,undefined,4);  
             });
         }
     }
