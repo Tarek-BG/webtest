@@ -24,12 +24,12 @@ block comment on Windows, use Shift + Alt + A
 
 
 <br>
-<br><a href="https://tarek-bg.github.io/web/archi/plagetent2024.webm" download>Si:Raouf ... proposition 01</a>
+<br><a href="https://tarek-bg.github.io/web/archi/plagetent2024.webm" download>Si:Raouf ... proposition 01</a><br>
       <a href="https://tarek-bg.github.io/web/archi/plagetent2024.webm" target="_blank" position="absolute">
         <img src="https://tarek-bg.github.io/web/archi/tente2024.png" alt="W3Schools" width="140" height="100">
       </a>
 
-<br><br><a href="https://tarek-bg.github.io/web/archi/plagevoil2024H.webm" download>Si:Raouf ... proposition 02</a>
+<br><br><a href="https://tarek-bg.github.io/web/archi/plagevoil2024H.webm" download>Si:Raouf ... proposition 02</a><br>
       <a href="https://tarek-bg.github.io/web/archi/plagevoil2024H.webm" target="_blank" position="absolute">
         <img src="https://tarek-bg.github.io/web/archi/voile2024.png" alt="W3Schools" width="140" height="100">
       </a>    
