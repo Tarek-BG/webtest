@@ -13,17 +13,24 @@ block comment on Windows, use Shift + Alt + A
 <br><a href="https://tarek-bg.github.io/web/archi/plagevoil2024H.webm" download>Si:Raouf ... proposition 02</a>
 <br>
       <a href="https://tarek-bg.github.io/web/archi/plan/iconHasdrubalV2_15p.gif" target="https://tarek-bg.github.io/web/archi/plan/index.html" position="absolute">
+
+
+
 <br><a href="https://tarek-bg.github.io/web/archi/HAM052024.zip" download>Download les Pages</a>
 <br>
       <a href="https://tarek-bg.github.io/web/archi/plage.mp4" target="_blank" position="absolute">
         <img src="https://tarek-bg.github.io/web/archi/plage.jpg" alt="W3Schools" width="140" height="100">
       </a>
 
-      <br>
 
+<br>
       <a href="https://tarek-bg.github.io/web/archi/plagetent2024.webm" target="_blank" position="absolute">
-        <img src="https://tarek-bg.github.io/web/archi/plage.jpg" alt="W3Schools" width="140" height="100">
+        <img src="https://tarek-bg.github.io/web/archi/tente2024.png" alt="W3Schools" width="140" height="100">
       </a>
+<br>
+      <a href="https://tarek-bg.github.io/web/archi/plagevoil2024H.webm" target="_blank" position="absolute">
+        <img src="https://tarek-bg.github.io/web/archi/voile2024.png" alt="W3Schools" width="140" height="100">
+      </a>    
 
       <br>
 
