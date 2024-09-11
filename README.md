@@ -9,6 +9,8 @@ to Uncomment code    ctrl+K+U
 block comment on Windows, use Shift + Alt + A 
 <br>
 <br><a href="https://tarek-bg.github.io/web/archi/plage.jpg" download>Si:Raouf</a>
+<br><a href="https://tarek-bg.github.io/web/archi/plagetent2024.webm" download>Si:Raouf ... proposition1</a>
+<br><a href="https://tarek-bg.github.io/web/archi/plagevoil2024H.webm" download>Si:Raouf ... proposition1</a>
 <br>
       <a href="https://tarek-bg.github.io/web/archi/plan/iconHasdrubalV2_15p.gif" target="https://tarek-bg.github.io/web/archi/plan/index.html" position="absolute">
 <br><a href="https://tarek-bg.github.io/web/archi/HAM052024.zip" download>Download les Pages</a>
