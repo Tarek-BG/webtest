@@ -34,6 +34,14 @@ block comment on Windows, use Shift + Alt + A
         <img src="https://tarek-bg.github.io/web/archi/voile2024.png" alt="W3Schools" width="140" height="100">
       </a>    
 
+
+
+<br><br><a href="https://tarek-bg.github.io/web/archi/pdg_prestige2018.pdf" download>Si:Raouf ... proposition 02</a><br>
+      <a href="https://tarek-bg.github.io/web/archi/pdg_prestige2018.pdf" target="_blank" position="absolute">
+        <img src="https://tarek-bg.github.io/web/archi/voile2018.png" alt="W3Schools" width="140" height="100">
+      </a>    
+
+
       <br>
 
     <br>
