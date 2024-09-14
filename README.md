@@ -38,7 +38,7 @@ block comment on Windows, use Shift + Alt + A
 
 <br><br><a href="https://tarek-bg.github.io/web/archi/pdg_prestige2018.pdf" download>Si:Raouf ... ancienne proposition 2018</a><br>
       <a href="https://tarek-bg.github.io/web/archi/pdg_prestige2018.pdf" target="_blank" position="absolute">
-        <img src="https://tarek-bg.github.io/web/archi/voile2018.png" alt="W3Schools" width="140" height="100">
+        <img src="https://tarek-bg.github.io/web/archi/voile2018.png" alt="Missing file" width="140" height="100">
       </a>    
 
 
