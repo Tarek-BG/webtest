@@ -19,6 +19,7 @@ function getData(){
 
 function outData(val){
     console.log(val);
+    output.innerHTML='';
     let html = '';
     val.forEach((ele,ind) =>{
         console.log(ele);
