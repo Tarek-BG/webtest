@@ -13,7 +13,7 @@ function getData(){
     .then(rep => rep.json())
     .then(data =>{
         console.log(data);
-        output(data.species)
+        outData(data.species)
     })
 }
 
