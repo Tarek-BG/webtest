@@ -13,3 +13,13 @@ function getData(){
         output(data.species)
     })
 }
+
+function outData(val){
+    console.log(val);
+    let html = '';
+    val.forEach((ele,ind) =>{
+        console.log(ele);
+        html +=`<div>${ind+1}. ${ele.name} ${ele.species}(${ele.id})</div>`;
+    })
+    output.innerHTML = html;
+}
