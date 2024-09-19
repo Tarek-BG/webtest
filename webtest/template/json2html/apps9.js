@@ -4,7 +4,7 @@ const output = document.querySelector('.output');
 const url = "pets-data.json";
 btn.onclick = ()=>{
     output.innerHTML = 'Connecting......';
-    getdata();
+    getData();
 }
 btn1.onclick = ()=>{output.innerHTML = 'Cleared';}
 
