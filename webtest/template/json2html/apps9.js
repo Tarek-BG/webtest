@@ -6,7 +6,8 @@ btn.onclick = ()=>{
     output.innerHTML = 'Connecting......';
     getdata();
 }
-btn1.onclick = ()=>{output.innerHTML = '';}
+btn1.onclick = ()=>{output.innerHTML = 'Cleared';}
+
 function getData(){
     fetch(url)
     .then(rep => rep.json())
