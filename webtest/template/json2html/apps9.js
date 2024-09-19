@@ -21,5 +21,6 @@ function outData(val){
         console.log(ele);
         html +=`<div>${ind+1}. ${ele.name} ${ele.species}(${ele.id})</div>`;
     })
+    html += `<small>${JSON.stringify(val)}</small>`
     output.innerHTML = html;
 }
