@@ -12,7 +12,7 @@ function getData(){
     fetch(url)
     .then(rep => rep.json())
     .then(data =>{
-        console.log("data   "+data);
+        console.log("data >>>  ");console.log(data);
         outData(data.species)
     })
 }
