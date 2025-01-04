@@ -19,10 +19,10 @@
     //<![CDATA[
         $(document).ready(function() {
             'use strict';
-             jQuery('#Car').jqGrid({
+             jQuery('#Cars').jqGrid({
                 url: 'cars.xml',
                 datatype: 'xml',
-                colNames:['Manufacturer','cfgName', 'cfgDesc', 'cfgType','absolutePath', 'updateDate', 'fileName'],
+                colNames:['Manufacturer','Model', 'Fuel', 'Cylinder','Horsepower', 'date', 'Source'],
                 colModel:[
                     {name:'Manufacturer',index:'Manufacturer', width:90, align:"right"},
                     {name:'Model',index:'Model', width:90, align:"right"},
