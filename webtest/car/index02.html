@@ -65,7 +65,7 @@
 				setTimeout(function () {
 					initDateEdit(elem);
 				}, 100);
-			};
+			},
 
 		$grid.jqGrid({
 			data: mydata,
@@ -103,11 +103,11 @@
 			},
 			inlineEditing: { keys: true },
 			caption: "Demonstration of new navGrid. Try to resize the grid"
-		}).jqGrid("navGrid", { view: true })
+		.jqGrid("navGrid", { view: true })
 		.jqGrid("inlineNav")
 		.jqGrid("filterToolbar")
-		.jqGrid("gridResize");
-	});
+		.jqGrid("gridResize")
+	});	
 	//]]>
 	</script>
 </head>
