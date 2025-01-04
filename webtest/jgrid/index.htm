@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The jQuery library is a prerequisite for all jqSuite products -->
+    <script type="text/ecmascript" src="../../../js/jquery.min.js"></script> 
+    <!-- This is the Javascript file of jqGrid -->   
+    <script type="text/ecmascript" src="../../../js/trirand/src/jquery.jqGrid.js"></script>
+    <!-- This is the localization file of the grid controlling messages, labels, etc.
+    <!-- We support more than 40 localizations -->
+    <script type="text/ecmascript" src="../../../js/trirand/i18n/grid.locale-en.js"></script>
+    <!-- A link to a jQuery UI ThemeRoller theme, more than 22 built-in and many more custom -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/jquery-ui.css" />
+    <!-- The link to the CSS that the grid needs -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/trirand/ui.jqgrid.css" />
+    <meta charset="utf-8" />
+    <title>jqGrid Loading Data - XML</title>
+</head>
+<body>
+
+    <table id="jqGrid"></table>
+    <div id="jqGridPager"></div>
+    <script type="text/javascript"> 
+        $(document).ready(function () {
+			var dynamic = false;
+		$("#jqGrid").jqGrid({
+                url: 'data.xml',
+                datatype: "xml",
+                colModel: [
+                    { label: 'Inv No', name: 'id', width: 75, key:true, sorttype: 'number', stype: 'number' },
+                    { label: 'Date', name: 'invdate', width: 90 },
+                    { label: 'Client', name: 'name', width: 100 },
+                    { label: 'Amount', name: 'amount', width: 80 },
+                    { label: 'Tax', name: 'tax', width: 80 },
+                    { label: 'Total', name: 'total', width: 80,
+						formatter: 'number',
+                        summaryTpl: "Sum: {0}", // set the summary template to show the group summary
+                        summaryType: "sum", // set the formula to calculate the summary type,
+						cellattr : function(rowId, cellValue, rawObject, cm, rdata) {
+							return " style='color:blue'";
+						}
+					},
+                    { label: 'Notes', name: 'note', width: 150 }
+                ],
+				width: 780,
+				gridview:true,
+                //loadonce: true,
+                rowNum: 40,
+                rowList: [10, 20, 30,40],
+                pager: '#jqGridPager',
+                sortname: 'id',
+                viewrecords: true,
+                sortorder: "desc",
+                grouping: true,
+                groupingView: {
+                    groupField: ["name"],
+                    groupColumnShow: [true],
+                    groupText: ["<b>{0}</b>"],
+                    groupOrder: ["asc"],
+                    groupSummary: [true],
+                    groupCollapse: false
+                    
+                },
+                caption: "Load Data - XML"			 
+            }).navGrid('#jqGridPager', { edit: false, add: false, del: false });
+        });			
+      </script>
+
+    
+</body>
+</html>
