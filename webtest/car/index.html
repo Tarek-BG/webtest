@@ -19,7 +19,7 @@
     //<![CDATA[
         $(document).ready(function() {
             'use strict';
-             jQuery('#Cars').jqGrid({
+             jQuery('#cars').jqGrid({
                 url: 'cars.xml',
                 datatype: 'xml',
                 colNames:['Manufacturer','Model', 'Fuel', 'Cylinder','Horsepower', 'date', 'Source'],
@@ -40,7 +40,7 @@
                 viewrecords: true,
                 gridview: true,
                 xmlReader: {
-                    root : "list",
+                    root : "cars",
                     row: "com\\.abc\\.db\\.ConfigInfo",
                     repeatitems: false
                 }
@@ -50,7 +50,7 @@
     </script>
 </head>
 <body>
-    <table id="list"><tr><td/></tr></table>
+    <table id="cars"><tr><td/></tr></table>
     <div id="pager"></div>
 </body>
 </html>
