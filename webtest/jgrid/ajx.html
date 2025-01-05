@@ -12,7 +12,7 @@
                     $(a).find('Car').each(function(){
                         var dmanu=$(this).find('Manufacturer').text();
                         var dmodel=$(this).find('Model').text();
-                        $("#ManufacturerANDModel").append(dmanu+" <div>hello</div> "+dmodel)
+                        $("#ManufacturerANDModel").append(dmanu+" <div>**</div> "+dmodel)
                     });
                 },
                 error:function(){
@@ -26,6 +26,6 @@
     <body>
         <div id="ManufacturerANDModel"></div>
         <br>
-        <div>hello</div>
+        <div> </div>
     </body>
     </html>
