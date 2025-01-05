@@ -38,8 +38,9 @@
                 success:function(mydata){
                     $(mydata).find('Car').each(function(){
 
-
-
+                    });
+                },
+           
             $grid = $("#list"),
             initDateEdit = function (elem) {
                 $(elem).datepicker({
@@ -56,7 +57,7 @@
                 setTimeout(function () {
                     initDateEdit(elem);
                 }, 100);
-            };
+            }
 
         $grid.jqGrid({
             data: mydata,
@@ -104,14 +105,11 @@
                 ]
             }
         }).jqGrid("gridResize");
-    });
+    
 
-    },
-    error:function(){
-                    alert("Error");
-                }
-            });
-        }); 
+            
+    }; 
+
     </script>
 </head>
 <body>
