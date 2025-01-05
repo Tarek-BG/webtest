@@ -1,0 +1,8 @@
+How to design dynamic web page using JQuery and DIV | What is JQuery? | JQuery and DOM Explained
+https://www.youtube.com/watch?v=vMY-ZiuRRE4
+
+How to access and display XML data dynamically in a web page using AJAX, JQuery and HTML DIV Element
+https://www.youtube.com/watch?v=h5tcUP6PdcI
+
+JavaScript Tip: Loading XML Data Using Fetch
+https://www.youtube.com/watch?v=0gON4MUdJE8
