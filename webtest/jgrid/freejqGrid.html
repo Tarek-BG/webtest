@@ -40,7 +40,6 @@
 
 
 
-,
             $grid = $("#list"),
             initDateEdit = function (elem) {
                 $(elem).datepicker({
@@ -52,6 +51,7 @@
                     showWeek: true
                 });
             },
+      
             initDateSearch = function (elem) {
                 setTimeout(function () {
                     initDateEdit(elem);
@@ -111,7 +111,7 @@
                     alert("Error");
                 }
             });
-
+        }); 
     </script>
 </head>
 <body>
