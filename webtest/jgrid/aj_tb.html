@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="jquery/jquery-3.3.1.min.js"></script> 
+
+    <script type="text/javascript">
+        $(function(){
+            $.ajax({
+                type:'GET',
+                url:'cdcatalog_with_xsl.xml',
+                datatype:'xml',
+                success:function(a){
+                    var txt="";
+                    txt=txt+"<table border='1' width='40%'>";
+                    txt=txt+"<tr>";
+                    txt=txt+"<td>Manufacturer</td>";
+                    txt=txt+"<td>Model</td>";
+                    txt=txt+"</tr>";
+
+                    $(a).find('Car').each(function(){
+                        var dmanu=$(this).find('Manufacturer').text();
+                        var dmodel=$(this).find('Model').text();
+                        txt=txt+"<tr>";
+                        txt=txt+"<td>"+dmanu+"</td>";
+                        txt=txt+"<td>"+dmodel+"</td>";
+                        txt=txt+"</tr>";
+                    });
+                    txt=txt+"</table>";
+                    $("#ManufacturerANDModel").append(txt);
+                },
+                error:function(){
+                    alert("Error");
+                }
+            });
+        });
+    </script> 
+    </head>
+
+    <body>
+        <div id="ManufacturerANDModel"></div>
+        <br>
+        <div> </div>
+    </body>
+    </html>
