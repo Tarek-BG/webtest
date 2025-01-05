@@ -6,11 +6,13 @@
         $(function(){
             $.ajax({
                 type:'GET',
-                url:'Data.xml',
+                url:'cdcatalog_with_xsl.xml',
                 datatype:'xml',
                 success:function(a){
-                    $(a).find('stdi').each(function(){
-
+                    $(a).find('Car').each(function(){
+                        var dmanu=$(this).find('Manufacturer').text();
+                        var dmodel=$(this).find('Model').text();
+                        $("#ManufacturerANDModel").append(dmanu+" - "+dmodel)
                     });
                 },
                 error:function(){
@@ -22,6 +24,6 @@
     </head>
 
     <body>
-        <div id="jqGridPager"></div>
+        <div id="ManufacturerANDModel"></div>
     </body>
     </html>
