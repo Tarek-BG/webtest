@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="jquery/jquery-3.3.1.min.js"></script> 
+
+    <script type="text/javascript">
+        $(function(){
+            $.ajax({
+                type:'GET',
+                url:'Data.xml',
+                datatype:'xml',
+                success:function(a){
+                    $(a).find('stdi').each(function(){
+
+                    });
+                },
+                error:function(){
+                    alert("Error");
+                }
+            });
+        });
+    </script> 
+    </head>
+
+    <body>
+        
+    </body>
