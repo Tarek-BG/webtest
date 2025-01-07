@@ -26,17 +26,28 @@
     </script>
     <script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
 
+    /*global $ */
     <script src="jquery/jquery-3.3.1.min.js"></script> 
-
     <script type="text/javascript">
         $(function(){
             $.ajax({
                 type:'GET',
                 url:'cdcatalog_with_xsl.xml',
                 datatype:'xml',
-…            });
+                success:function(a){
+                    $(a).find('Car').each(function(){
+                        var dmanu=$(this).find('Manufacturer').text();
+                        var dmodel=$(this).find('Model').text();
+                        $("#ManufacturerANDModel").append(dmanu+" <div>**</div> "+dmodel)
+                    });
+                },
+                error:function(){
+                    alert("Error");
+                }
+            });
         });
     </script> 
+    /*global $ */
 
     <script>
     //<![CDATA[
