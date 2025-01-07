@@ -30,19 +30,19 @@
     <script type="text/javascript">
         $(function(){
            /*mydata */
-            var mydata = [
+
 
 
 $.ajax({
     type:'GET',
     url:'cdcatalog_with_xsl.xml',
     datatype:'xml',
-       success:function(){
+       success:function(mydata){
                          $(mydata).find('Car').each(function(){   });
                          },
  }),
 
- ],         /*mydata */
+         /*mydata */
 
            
             $grid = $("#list"),
