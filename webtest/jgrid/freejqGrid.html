@@ -29,8 +29,20 @@
     <script src="jquery/jquery-3.3.1.min.js"></script> 
     <script type="text/javascript">
         $(function(){
+           /*mydata */
+            var mydata = [
 
-     
+
+$.ajax({
+    type:'GET',
+    url:'cdcatalog_with_xsl.xml',
+    datatype:'xml',
+       success:function(){
+                         $(mydata).find('Car').each(function(){   });
+                         },
+ }),
+
+ ],         /*mydata */
 
            
             $grid = $("#list"),
