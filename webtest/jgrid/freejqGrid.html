@@ -24,22 +24,14 @@
         $.jgrid = $.jgrid || {};
         $.jgrid.no_legacy_api = true;
     </script>
+
     <script src="https://rawgit.com/free-jqgrid/jqGrid/master/js/jquery.jqgrid.src.js"></script>
-
-
     <script src="jquery/jquery-3.3.1.min.js"></script> 
-
     <script type="text/javascript">
         $(function(){
-            $.ajax({
-                type:'GET',
-                url:'cdcatalog_with_xsl.xml',
-                datatype:'xml',
-                success:function(mydata){
-                    $(mydata).find('Car').each(function(){
 
-                    });
-                },
+     
+
            
             $grid = $("#list"),
             initDateEdit = function (elem) {
@@ -52,12 +44,11 @@
                     showWeek: true
                 });
             },
-      
             initDateSearch = function (elem) {
                 setTimeout(function () {
                     initDateEdit(elem);
                 }, 100);
-            }
+            };
 
         $grid.jqGrid({
             data: mydata,
@@ -108,12 +99,13 @@
     
 
             
-    }; 
+    }); 
 
     </script>
 </head>
 <body>
-    <h2>FreejqGrid</h2>
+    <h2>outerDiv</h2>
+    <!--h2>FreejqGrid</h2-->
     <!--a href="https://free-jqgrid.github.io/jqGrid/">FreejqGrid?</a><br-->
     
     <div id="outerDiv" style="margin:5px;">
