@@ -12,7 +12,6 @@ block comment on Windows, use Shift + Alt + A
 
 <br><a href="archi/piscine/Downloadspisc.rar" download>Download les Pages</a>
 <br><a><img src="https://tarek-bg.github.io/web/archi/piscine/20250108_105847.jpg" alt="W3S" width="140" height="100">Projecteur Piscine</a>
-<br>
       <a href="https://tarek-bg.github.io/web/archi/piscine/20250108_110012C.mp4" target="_blank" position="absolute">
               <img src="https://tarek-bg.github.io/web/archi/piscine/20250108_110001.jpg" alt="W3S" width="140" height="100">
                     </a>
