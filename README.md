@@ -8,8 +8,13 @@ to Uncomment code    ctrl+K+U
 <BR>
 block comment on Windows, use Shift + Alt + A 
 <br>
-<br><a href="https://tarek-bg.github.io/web/archi/plage.jpg" download>Si:Raouf</a>
+<br><a href="https://tarek-bg.github.io/web/archi/piscine/20250108_105847.jpg" download>Si:Raouf</a>
 
+<br><a href="archi/piscine/Downloadspisc.rar" download>Download les Pages</a>
+<br>
+      <a href="https://tarek-bg.github.io/web/archi/piscine/20250108_110012C.mp4" target="_blank" position="absolute">
+              <img src="https://tarek-bg.github.io/web/archi/piscine/20250108_110001.jpg" alt="W3S" width="140" height="100">
+                    </a>
 
 <br>
       <a href="https://tarek-bg.github.io/web/archi/plan/iconHasdrubalV2_15p.gif" target="https://tarek-bg.github.io/web/archi/plan/index.html" position="absolute">
