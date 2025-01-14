@@ -1550,7 +1550,7 @@ function focusSearchField() {
 }
 
 
-/* #### Controls #### */
+/* #### Controls 
 function toggleControls() {
 	if( bControlsOpened ) {
 		hideControls();
@@ -1581,7 +1581,7 @@ function hideControls() {
 	}
 }
 
-
+tarek#### */
 function toggleUi() {
     if( bUiOpened ) {
         hideUi();
