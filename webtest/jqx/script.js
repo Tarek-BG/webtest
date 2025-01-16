@@ -5,4 +5,6 @@ fetch("https://tarek-bg.github.io/web/webtest/template/Handlebars/data/pets-data
     return res.json();    
 }).then(function(data){
     console.log(data);
+
+    
 });
