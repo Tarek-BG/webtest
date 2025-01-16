@@ -31,7 +31,7 @@
     /*jslint browser: true */
     $(function () {
         "use strict";
-            var mydata =JSON.stringify(data) ,
+            var mydata =[JSON.stringify(data)] ,
             $grid = $("#list"),
             initDateEdit = function (elem) {
                 $(elem).datepicker({
@@ -110,7 +110,7 @@
 //tarek
     <p id="demo"></p>
     <script>
-        const myObj = JSON.parse(Gdata);
+        const myObj = JSON.parse(data);
         document.getElementById("demo").innerHTML = myObj["invdate"];
         </script>
 </body>
