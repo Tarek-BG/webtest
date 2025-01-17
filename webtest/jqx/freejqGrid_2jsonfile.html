@@ -130,7 +130,21 @@ $.getJSON("gfgdetails.json",
         const myObj = JSON.parse(data);
         document.getElementById("demo").innerHTML = myObj["invdate"];
         </script>
--->            
+-->  
+<div>
+<script>    
+$(document).ready(function () { 
+    // FETCHING DATA FROM JSON FILE 
+    $.getJSON("gfgdetails.json", 
+            function (data) {
+                return data;
+                console.group("data in html head");console.log(data)   
+            })
+        });
+</script>
+
+</div>
+
 </body>
 //tarek  <br>  https://www.youtube.com/watch?v=Pnlt1NiBt68
 <script src="./script.js">
