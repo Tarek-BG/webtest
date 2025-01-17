@@ -36,6 +36,16 @@
     /*global $ */
     /*jslint browser: true */
 
+
+$(document).ready(function () { 
+// FETCHING DATA FROM JSON FILE 
+$.getJSON("gfgdetails.json", 
+        function (data) {
+            return data;
+            console.group("data in html");console.log(data)   
+        })
+    });
+
     $(function () {
         "use strict";
             var mydata =data ,
