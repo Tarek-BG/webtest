@@ -1,7 +1,7 @@
 //  main.js
  
 // POST request using fetch()
-fetch("https://jsonplaceholder.typicode.com/posts", {
+fetch("posts.json", {
     
     // Adding method type
     method: "POST",
