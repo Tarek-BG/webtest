@@ -59,13 +59,15 @@
 				<th>GFG Articles</th> 
 			</tr> 
 
-			<script>console.log("data from script");console.log(data)</script>
+			<script>console.group("data in top html");console.log(data)</script>
 			<script> 
 				$(document).ready(function () { 
 
 					// FETCHING DATA FROM JSON FILE 
 					$.getJSON("gfgdetails.json", 
 							function (data) { 
+
+					console.group("data in top html");console.log(data)	;
 						var student = ''; 
                         
 						// ITERATING THROUGH OBJECTS 
