@@ -4,7 +4,7 @@ fetch("https://tarek-bg.github.io/web/webtest/jqx/fetches.json").then
 (function(res){
     return res.json();    
 }).then(function(data){
-    console.log("data in script");
+    console.group("data in script fetches.json");
     console.log(data);
 
 });
