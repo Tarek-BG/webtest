@@ -59,6 +59,7 @@
 				<th>GFG Articles</th> 
 			</tr> 
 
+			<script>console.log("data from script");console.log(data)</script>
 			<script> 
 				$(document).ready(function () { 
 
@@ -66,7 +67,7 @@
 					$.getJSON("gfgdetails.json", 
 							function (data) { 
 						var student = ''; 
-                        console.log(data);
+                        
 						// ITERATING THROUGH OBJECTS 
 						$.each(data, function (key, value) { 
 
