@@ -48,8 +48,9 @@ $.getJSON("fetches.json",
 
     $(function () {
         "use strict";
+        console.group("data in html head jqGrid");console.log(data) ;
             var mydata =data ,
-            console.group("data in html head jqGrid");console.log(data) 
+            
             $grid = $("#list"),
             initDateEdit = function (elem) {
                 $(elem).datepicker({
