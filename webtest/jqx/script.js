@@ -8,4 +8,3 @@ fetch("https://tarek-bg.github.io/web/webtest/jqx/fetches.json").then
     console.log(data);
 
 });
-export  data;
