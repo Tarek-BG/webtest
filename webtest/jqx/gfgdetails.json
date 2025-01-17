@@ -1,4 +1,4 @@
-{"Gdata":[
+[
                 { "NoOfProblems": "10",  "invdate": "2007-10-01", "GFGUserName": "user-",   "note": "note",   "ToTalScore": "",       "Articles": "",      "closed": true,  "ship_via": "TN", "total": "" },
                 { "NoOfProblems": "20",  "invdate": "2007-10-02", "GFGUserName": "user-2",  "note": "note2",  "ToTalScore": "300.00", "Articles": "20.00", "closed": false, "ship_via": "FE", "total": "320.00" },
                 { "NoOfProblems": "30",  "invdate": "2007-09-01", "GFGUserName": "user-3",  "note": "note3",  "ToTalScore": "400.00", "Articles": "30.00", "closed": false, "ship_via": "FE", "total": "430.00" },
@@ -11,5 +11,4 @@
                 { "NoOfProblems": "100", "invdate": "2007-09-08", "GFGUserName": "user-10", "note": "note10", "ToTalScore": "500.00", "Articles": "30.00", "closed": true,  "ship_via": "TN", "total": "530.00" },
                 { "NoOfProblems": "110", "invdate": "2007-09-08", "GFGUserName": "user-11", "note": "note11", "ToTalScore": "500.00", "Articles": "30.00", "closed": false, "ship_via": "FE", "total": "530.00" },
                 { "NoOfProblems": "120", "invdate": "2007-09-10", "GFGUserName": "user-12", "note": "note12", "ToTalScore": "500.00", "Articles": "30.00", "closed": false, "ship_via": "FE", "total": "530.00" }
-            ]
-        }
+]
