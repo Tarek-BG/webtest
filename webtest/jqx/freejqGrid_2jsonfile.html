@@ -40,16 +40,16 @@
 $(document).ready(function () { 
 // FETCHING DATA FROM JSON FILE 
 $.getJSON("fetches.json", 
-        function (xdata) {
+        function (data) {
           //  return data;
-          var  xdata=data ;console.group("data in html head");console.log(xdata)   
+          //var  xdata=data ;console.group("data in html head");console.log(xdata)   
         })
     });
 
     $(function () {
         "use strict";
         console.group("data in html head jqGrid");console.log(data) ;
-            var mydata =xdata ,
+            var mydata =data ,
             
             $grid = $("#list"),
             initDateEdit = function (elem) {
