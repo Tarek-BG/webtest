@@ -1,5 +1,5 @@
 [
-{ "GFGUserName": "user-1","NoOfProblems": "10","ToTalScore": "100",       "Articles": "10"},
+{ "GFGUserName": "user-1","NoOfProblems": "10","ToTalScore": "100",  "Articles": "10.00"},
 { "GFGUserName": "user-2","NoOfProblems": "20","ToTalScore": "300.00", "Articles": "20.00"},
 { "GFGUserName": "user-3", "NoOfProblems": "30","ToTalScore": "400.00", "Articles": "30.00"},
 { "GFGUserName": "user-4","NoOfProblems": "40","ToTalScore": "200.00", "Articles": "10.00"},
