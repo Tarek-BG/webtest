@@ -69,7 +69,7 @@ $.getJSON("https://tarek-bg.github.io/web/2xlsxLocal/dataHtl/htl.json",
 
         $grid.jqGrid({
            data: mydata,
-            colNames: ["", "Matricule","Nom & prénom", "Date naissance", "CIN",  "S.Base", "Closed", "Date Embauche", "Notes"],
+            colNames: ["", "Matricule","Nom & prénom", "Date naissance", "CIN",  "Closed", "Date Embauche", "Notes"],
             colModel: [
                 { name: "act", template: "actions", width: 105 },
                 { name: "Nom & prénom", align: "center", width: 150, editrules: {required: true} },
