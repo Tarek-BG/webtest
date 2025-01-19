@@ -69,9 +69,10 @@ $.getJSON("https://tarek-bg.github.io/web/2xlsxLocal/dataHtl/htl.json",
 
         $grid.jqGrid({
            data: mydata,
-            colNames: ["", "Matricule","Nom & prénom", "Date naissance", "CIN",  "Closed", "Date Embauche", "Notes"],
+            colNames: ["Action", "Matricule","Nom & prénom", "Date naissance", "CIN",  "Closed", "Date Embauche", "Notes"],
             colModel: [
                 { name: "act", template: "actions", width: 105 },
+                { name: "Matricule", width: 70,align: "center", format: "0000000000", autoResizableMinColSize: 40 },
                 { name: "Nom & prénom", align: "center", width: 150, editrules: {required: true} },
             { name: "Dt naissance", align: "center", width: 150, editrules: {required: true} },  
                /* { name: "Dt naissance", width: 172, align: "center", sorttype: "date", frozen: true,
@@ -79,7 +80,7 @@ $.getJSON("https://tarek-bg.github.io/web/2xlsxLocal/dataHtl/htl.json",
                     editoptions: { dataInit: initDateEdit },
                     searchoptions: { sopt: ["eq", "ne", "lt", "le", "gt", "ge"], dataInit: initDateSearch } },
                */ { name: "CIN", width: 70 , align: "center",format: "0000000000"},
-                { name: "Matricule", width: 70,align: "center", format: "0000000000", autoResizableMinColSize: 40 },
+               
                // { name: "S.Base",align:"right", width: 70, format: "0 000 000.000" },
                 { name: "closed", width: 49, template: "booleanCheckboxFa" },
                 { name: "Date Embauche", width: 76, align: "center", formatter: "select",
