@@ -15,7 +15,7 @@ block comment on Windows, use Shift + Alt + A
 <br>
 <br><a href="https://drive.google.com/file/d/1MNO0ZnpimOvEDQEPoMZbPh8UtE4jeBxG/view" download>Si:Touhami</a><br>
       <a href="https://drive.google.com/file/d/1MNO0ZnpimOvEDQEPoMZbPh8UtE4jeBxG/view" target="_blank" position="absolute">
-        <img src="https://github.com/Tarek-BG/web/blob/gh-pages/3video/medit00.png" alt="W3Schools" width="140" height="100">
+        <img src="https://tarek-bg.github.io/web/3video/medit00.png" alt="" width="140" height="100">
       </a>
 
 
