@@ -284,8 +284,8 @@ kbd {
 		border: 1px solid #444;
 		box-shadow: 0 0 16px 0 #454545;
 		color: #fff;
-	/*	background: linear-gradient(to bottom, rgba(0,100,100,0.1) 0%, rgba(0,0,0,0.4) 100%), radial-gradient(at top center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 120%) #989898;
-	*/	background-blend-mode: multiply,multiply;
+		background: linear-gradient(to bottom, rgba(0,100,100,0.1) 0%, rgba(0,0,0,0.4) 100%), radial-gradient(at top center, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 120%) #989898;
+		background-blend-mode: multiply,multiply;
 	}
 
 		.fullscreen-popup a,
