@@ -1173,7 +1173,7 @@ body.showguide #settings {
 		margin: 0 3% 6px;
 		padding: 6px 12px;
 		border-radius: 0;
-		color: #333;
+		color: hsl(143, 85%, 41%);
 		background: #bbb;
 		width: 44% !important;
 		cursor: pointer;
