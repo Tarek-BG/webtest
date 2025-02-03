@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4 Table from JSON</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.1cm;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            width: 21cm;
+            min-height: 29.7cm;
+            margin: auto;
+            padding: 0.1cm;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            page-break-inside: avoid;
+            margin-top: 1px;
+        }
+        th, td {width: 14cm;height: 3.1cm;
+            border: 1px solid black;
+            padding: 0.5cm;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tables will be inserted here -->
+    </div>
+    <script>
+        // Fetch the JSON file
+        fetch('htl.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.querySelector('.container');
+                const rowsPerTable = 7;
+                const colsPerRow = 2;
+
+                // Create tables with 7 rows each
+                for (let i = 0; i < data.length; i += rowsPerTable) {
+                    const table = document.createElement('table');
+                    const tbody = document.createElement('tbody');
+
+
+
+
+                    
+                    // Create 7 rows
+                    for (let j = i; j < i + rowsPerTable && j < data.length; j++) {
+                        const tr = document.createElement('tr');
+                        
+                        // Create 2 columns per row
+                        for (let k = 0; k < colsPerRow; k++) {
+                            const td = document.createElement('td');
+                            // Alternate between Matricule and Name      
+                            const content = k === 0 ? 
+                                        data[j]["Nom & prénom"]+" >> "+data[j]["Matricule"] +" >Date> "+data[j]["Date Embauche"]: data[j]["Matricule"]+" >> "+data[j+1]["Nom & prénom"]+" >Date> "+data[j+1]["Date Embauche"];
+                                               // j=j+1;
+                            td.textContent = content;
+                            tr.appendChild(td);
+                        }
+                        
+                        tbody.appendChild(tr);
+                    }
+
+                    table.appendChild(tbody);
+                    container.appendChild(table);
+
+                    // Add page break if more data remains
+                    if (i + rowsPerTable < data.length) {
+                        const pageBreak = document.createElement('div');
+                        pageBreak.style.pageBreakAfter = 'always';
+                        container.appendChild(pageBreak);
+                    }
+                }
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
+    
+</body>
+</html>
