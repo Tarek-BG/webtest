@@ -28,7 +28,7 @@
                         });
 
                         // Edit data with PUT
-                        const editData = jsonpath.query(data.pets, '$[0]');
+                        const editData = JSONPath({ path: '$[0]', json: data.pets });
                         if (editData.length > 0) {
                             editData[0].name = 'Edited Name';
                         }
