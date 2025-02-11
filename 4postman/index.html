@@ -16,7 +16,7 @@
     <script>
         $(document).ready(function() {
             // Fetch JSON data
-            $.getJSON('https://tarek-bg.github.io/web/1data/pets-data.json', function(data) {console.log(data);
+            $.getJSON('https://tarek-bg.github.io/web/1data/pets-data.json', function(data) {
                 // Insert id to all records
                 const newData = JSONPath.JSONPath({ path: '$[*]', json: data }).map((item, index) => ({
                     id: index + 1,
@@ -39,7 +39,7 @@
 
                 // Output the modified data
                 $('#output').text(JSON.stringify(newData, null, 2));
-            });console.log(data);
+            });
         });
     </script>
 </body>
