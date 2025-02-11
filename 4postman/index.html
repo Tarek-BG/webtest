@@ -118,7 +118,7 @@
                 data.push(record);
             }
 
-            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+            document.getElementById('output').textContent = JSON.stringify(data, null, 2);console.log('API Response:', data); // Debugging: Log the response
             alert('Record saved!');
         }
 
