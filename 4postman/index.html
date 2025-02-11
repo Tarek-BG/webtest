@@ -16,38 +16,41 @@
     <script>
         $(document).ready(function() {
             // Fetch JSON data
-            $.getJSON('https://tarek-bg.github.io/web/1data/pets-data.json', function(data) {
-                console.log(data); // Log the response to the console
-                
-                // Check if data is an array
-                if (Array.isArray(data)) {
-                    // Insert id to all records
-                    data.forEach((item, index) => {
-                        item.id = index + 1;
-                    });
+            $.getJSON('https://tarek-bg.github.io/web/1data/pets-data.json')
+                .done(function(data) {
+                    console.log(data); // Log the response to the console
 
-                    // Edit data with PUT
-                    const editData = jsonpath.query(data, '$[0]');
-                    if (editData.length > 0) {
-                        editData[0].name = 'Edited Name';
+                    // Check if data is an array
+                    if (Array.isArray(data.pets)) {
+                        // Insert id to all records
+                        data.pets.forEach((item, index) => {
+                            item.id = index + 1;
+                        });
+
+                        // Edit data with PUT
+                        const editData = jsonpath.query(data.pets, '$[0]');
+                        if (editData.length > 0) {
+                            editData[0].name = 'Edited Name';
+                        }
+
+                        // Add records with POST
+                        data.pets.push({
+                            id: data.pets.length + 1,
+                            name: 'New Pet',
+                            type: 'Dog',
+                            age: 2
+                        });
+
+                        // Output the modified data
+                        $('#output').text(JSON.stringify(data.pets, null, 2));
+                    } else {
+                        console.error("Data is not an array");
                     }
-
-                    // Add records with POST
-                    data.push({
-                        id: data.length + 1,
-                        name: 'New Pet',
-                        type: 'Dog',
-                        age: 2
-                    });
-
-                    // Output the modified data
-                    $('#output').text(JSON.stringify(data, null, 2));
-                } else {
-                    console.error("Data is not an array");
-                }
-            });
+                })
+                .fail(function(jqxhr, textStatus, error) {
+                    console.error("Request Failed: " + textStatus + ", " + error);
+                });
         });
     </script>
 </body>
 </html>
-
