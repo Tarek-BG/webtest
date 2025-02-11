@@ -7,7 +7,7 @@
     <!-- Include jQuery from CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Include JSONPath from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/jsonpath-plus@5.0.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonpath/0.11.2/jsonpath.min.js"></script>
 </head>
 <body>
     <h1>JSONPath Example</h1>
@@ -18,29 +18,29 @@
             // Fetch JSON data
             $.getJSON('https://tarek-bg.github.io/web/1data/pets-data.json', function(data) {
                 // Insert id to all records
-                const newData = JSONPath.JSONPath({ path: '$[*]', json: data }).map((item, index) => ({
-                    id: index + 1,
-                    ...item
-                }));
+                data.forEach((item, index) => {
+                    item.id = index + 1;
+                });
 
                 // Edit data with PUT
-                const editData = JSONPath.JSONPath({ path: '$[0]', json: newData });
+                const editData = jsonpath.query(data, '$[0]');
                 if (editData.length > 0) {
                     editData[0].name = 'Edited Name';
                 }
 
                 // Add records with POST
-                newData.push({
-                    id: newData.length + 1,
+                data.push({
+                    id: data.length + 1,
                     name: 'New Pet',
                     type: 'Dog',
                     age: 2
                 });
 
                 // Output the modified data
-                $('#output').text(JSON.stringify(newData, null, 2));
+                $('#output').text(JSON.stringify(data, null, 2));
             });
         });
     </script>
 </body>
 </html>
+
