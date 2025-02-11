@@ -3,88 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSONPath Example</title>
+    <title>Pet Records Manager</title>
     <!-- Axios CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- JSONPath CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/jsonpath/jsonpath.min.js"></script>
+    <style>
+        .form-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .form-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>JSONPath Example</h1>
+    <h1>Pet Records Manager</h1>
     <button onclick="fetchData()">Fetch Data</button>
-    <button onclick="insertIds()">Insert IDs</button>
-    <button onclick="editRecord()">Edit Record</button>
-    <button onclick="addRecord()">Add Record</button>
-
+    <div class="form-container">
+        <h2>Record Details</h2>
+        <img id="recordPhoto" src="" alt="Pet Photo">
+        <input type="text" id="recordId" placeholder="ID" disabled>
+        <input type="text" id="recordName" placeholder="Name">
+        <input type="text" id="recordSpecies" placeholder="Species">
+        <textarea id="recordFavFoods" placeholder="Favorite Foods (comma-separated)"></textarea>
+        <input type="number" id="recordBirthYear" placeholder="Birth Year">
+        <input type="text" id="recordPhotoUrl" placeholder="Photo URL">
+        <button onclick="saveRecord()">Save</button>
+        <button onclick="addRecord()">Add New</button>
+        <button onclick="deleteRecord()">Delete</button>
+        <button onclick="previousRecord()">Previous</button>
+        <button onclick="nextRecord()">Next</button>
+    </div>
     <pre id="output"></pre>
 
     <script>
-        let data = [];
+        let data = []; // Array to hold the records
+        let currentIndex = 0; // Track the current record being displayed
 
-        // Fetch JSON data from the URL
+        // Fetch JSON data from GitHub Pages
         async function fetchData() {
             try {
-                const response = await axios.get('https://tarek-bg.github.io/web/1data/pets-data.json');
-                data = response.data;
+                const url = 'https://tarek-bg.github.io/web/1data/pets-data.json';
+                const response = await axios.get(url);
+
+                console.log('API Response:', response.data); // Debugging: Log the response
+
+                // Ensure the response is an array
+                if (Array.isArray(response.data)) {
+                    data = response.data;
+                } else {
+                    console.error('Response is not an array:', response.data);
+                    data = []; // Fallback to an empty array
+                }
+
                 document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+                displayRecord(currentIndex); // Display the first record
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         }
 
-        // Insert IDs to all records
-        function insertIds() {
-            data.forEach((value, index) => {
-                value.id = index.toString(); // Assign the index as the ID
-            });
-            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
-        }
-
-        // Edit a record using PUT
-        async function editRecord() {
-            const recordId = prompt('Enter the ID of the record to edit:');
-            const newName = prompt('Enter the new name:');
-            const newAge = prompt('Enter the new age:');
-
-            const record = data.find(record => record.id === recordId);
-            if (record) {
-                record.name = newName;
-                record.age = newAge;
-
-                try {
-                    await axios.put(`https://tarek-bg.github.io/web/1data/pets-data.json/${recordId}`, record);
-                    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
-                } catch (error) {
-                    console.error('Error updating record:', error);
-                }
+        // Display a record in the form
+        function displayRecord(index) {
+            if (index >= 0 && index < data.length) {
+                const record = data[index];
+                document.getElementById('recordId').value = record.id || '';
+                document.getElementById('recordName').value = record.name || '';
+                document.getElementById('recordSpecies').value = record.species || '';
+                document.getElementById('recordFavFoods').value = record.favFoods.join(', ') || '';
+                document.getElementById('recordBirthYear').value = record.birthYear || '';
+                document.getElementById('recordPhotoUrl').value = record.photo || '';
+                document.getElementById('recordPhoto').src = record.photo || '';
+                currentIndex = index;
             } else {
-                alert('Record not found!');
+                alert('No more records!');
             }
         }
 
-        // Add a new record using POST
-        async function addRecord() {
-            if (!data) {
-                alert('Please fetch data first!');
-                return;
-            }
-
-            const newName = prompt('Enter the name of the new record:');
-            const newAge = prompt('Enter the age of the new record:');
-
-            const newRecord = {
-                id: data.length.toString(), // Use the current length as the ID
-                name: newName,
-                age: newAge
+        // Save the current record
+        function saveRecord() {
+            const record = {
+                id: document.getElementById('recordId').value,
+                name: document.getElementById('recordName').value,
+                species: document.getElementById('recordSpecies').value,
+                favFoods: document.getElementById('recordFavFoods').value.split(',').map(food => food.trim()),
+                birthYear: parseInt(document.getElementById('recordBirthYear').value),
+                photo: document.getElementById('recordPhotoUrl').value
             };
 
-            data.push(newRecord);
+            if (record.id) {
+                // Update existing record
+                const index = data.findIndex(r => r.id === record.id);
+                if (index !== -1) {
+                    data[index] = record;
+                }
+            } else {
+                // Add new record
+                record.id = (data.length + 1).toString(); // Generate a new ID
+                data.push(record);
+            }
 
-            try {
-                await axios.post('https://tarek-bg.github.io/web/1data/pets-data.json', newRecord);
+            document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+            alert('Record saved!');
+        }
+
+        // Add a new record
+        function addRecord() {
+            document.getElementById('recordId').value = '';
+            document.getElementById('recordName').value = '';
+            document.getElementById('recordSpecies').value = '';
+            document.getElementById('recordFavFoods').value = '';
+            document.getElementById('recordBirthYear').value = '';
+            document.getElementById('recordPhotoUrl').value = '';
+            document.getElementById('recordPhoto').src = '';
+        }
+
+        // Delete the current record
+        function deleteRecord() {
+            if (confirm('Are you sure you want to delete this record?')) {
+                data.splice(currentIndex, 1); // Remove the record
                 document.getElementById('output').textContent = JSON.stringify(data, null, 2);
-            } catch (error) {
-                console.error('Error adding record:', error);
+                displayRecord(currentIndex); // Display the next record
+            }
+        }
+
+        // Navigate to the previous record
+        function previousRecord() {
+            if (currentIndex > 0) {
+                displayRecord(currentIndex - 1);
+            } else {
+                alert('This is the first record!');
+            }
+        }
+
+        // Navigate to the next record
+        function nextRecord() {
+            if (currentIndex < data.length - 1) {
+                displayRecord(currentIndex + 1);
+            } else {
+                alert('This is the last record!');
             }
         }
     </script>
