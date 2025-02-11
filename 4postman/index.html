@@ -63,11 +63,11 @@
 
                 console.log('API Response:', response.data); // Debugging: Log the response
 
-                // Ensure the response is an array
-                if (Array.isArray(response.data)) {
-                    data = response.data;
+                // Extract the "pets" array from the response
+                if (response.data && response.data.pets && Array.isArray(response.data.pets)) {
+                    data = response.data.pets;
                 } else {
-                    console.error('Response is not an array:', response.data);
+                    console.error('Response does not contain a valid "pets" array:', response.data);
                     data = []; // Fallback to an empty array
                 }
 
@@ -82,10 +82,10 @@
         function displayRecord(index) {
             if (index >= 0 && index < data.length) {
                 const record = data[index];
-                document.getElementById('recordId').value = record.id || '';
+                document.getElementById('recordId').value = record.id || index.toString();
                 document.getElementById('recordName').value = record.name || '';
                 document.getElementById('recordSpecies').value = record.species || '';
-                document.getElementById('recordFavFoods').value = record.favFoods.join(', ') || '';
+                document.getElementById('recordFavFoods').value = record.favFoods ? record.favFoods.join(', ') : '';
                 document.getElementById('recordBirthYear').value = record.birthYear || '';
                 document.getElementById('recordPhotoUrl').value = record.photo || '';
                 document.getElementById('recordPhoto').src = record.photo || '';
