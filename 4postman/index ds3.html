@@ -32,10 +32,11 @@
             }
         }
 
-        // Insert IDs to all records
+        // Insert IDs to all records using JSONPath
         function insertIds() {
-            data.forEach((value, index) => {
-                value.id = index.toString(); // Assign the index as the ID
+            jsonpath.apply(data, '$[*]', (value, path) => {
+                value.id = path.split('[')[1].split(']')[0];
+                return value;
             });
             document.getElementById('output').textContent = JSON.stringify(data, null, 2);
         }
@@ -46,7 +47,7 @@
             const newName = prompt('Enter the new name:');
             const newAge = prompt('Enter the new age:');
 
-            const record = data.find(record => record.id === recordId);
+            const record = jsonpath.query(data, `$[?(@.id == ${recordId})]`)[0];
             if (record) {
                 record.name = newName;
                 record.age = newAge;
@@ -64,16 +65,11 @@
 
         // Add a new record using POST
         async function addRecord() {
-            if (!data) {
-                alert('Please fetch data first!');
-                return;
-            }
-
             const newName = prompt('Enter the name of the new record:');
             const newAge = prompt('Enter the age of the new record:');
 
             const newRecord = {
-                id: data.length.toString(), // Use the current length as the ID
+                id: data.length.toString(),
                 name: newName,
                 age: newAge
             };
