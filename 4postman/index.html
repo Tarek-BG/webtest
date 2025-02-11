@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPath Example</title>
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include JSONPath from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jsonpath-plus@5.0.1"></script>
+</head>
+<body>
+    <h1>JSONPath Example</h1>
+    <pre id="output"></pre>
+
+    <script>
+        $(document).ready(function() {
+            // Fetch JSON data
+            $.getJSON('https://tarek-bg.github.io/web/1data/pets-data.json', function(data) {
+                // Insert id to all records
+                const newData = JSONPath.JSONPath({ path: '$[*]', json: data }).map((item, index) => ({
+                    id: index + 1,
+                    ...item
+                }));
+
+                // Edit data with PUT
+                const editData = JSONPath.JSONPath({ path: '$[0]', json: newData });
+                if (editData.length > 0) {
+                    editData[0].name = 'Edited Name';
+                }
+
+                // Add records with POST
+                newData.push({
+                    id: newData.length + 1,
+                    name: 'New Pet',
+                    type: 'Dog',
+                    age: 2
+                });
+
+                // Output the modified data
+                $('#output').text(JSON.stringify(newData, null, 2));
+            });
+        });
+    </script>
+</body>
+</html>
