@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4 Table from JSON</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.1cm;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            width: 21cm;
+            min-height: 29.7cm;
+            margin: auto;
+            padding: 0.3cm;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            page-break-inside: avoid;
+            margin-top: 1px;
+        }
+        th, td {
+            width: 14cm;
+            height: 3.1cm;
+            border: 1px solid black;
+            padding: 0.5cm;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Tables will be inserted here -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const data = JSON.parse(localStorage.getItem('jsonData'));
+            const container = document.querySelector('.container');
+            const rowsPerTable = 7;
+            const colsPerRow = 2;
+            const seenRecords = new Set();
+
+            // Prompt user to input text for all cells
+            const userText = prompt("Please enter text to put in all cells:");
+
+            for (let i = 0; i < data.length; i += (rowsPerTable * colsPerRow)) {
+                const table = document.createElement('table');
+                const tbody = document.createElement('tbody');
+
+                for (let j = i; j < i + (rowsPerTable * colsPerRow) && j < data.length; j += colsPerRow) {
+                    const tr = document.createElement('tr');
+
+                    for (let k = 0; k < colsPerRow; k++) {
+                        const index = j + k;
+                        const record = data[index];
+                        if (record && !seenRecords.has(record["Matricule"])) {
+                            seenRecords.add(record["Matricule"]);
+                            const td = document.createElement('td');
+                            //const content = `<ul><h5>Nom : ${record["Nom & prénom"]}</h5></ul>${record["Matricule"]} <br> Date : ${record["Date Embauche"]} <br> User Text: ${userText}`;
+                            const content = `<h4>${userText}</h4> <h5>Nom : ${record["Nom & prénom"]}</h5>  ${record["Matricule"]} ${record["Service"]} ${record["Date Embauche"]}`;
+                            td.innerHTML = content;
+                            tr.appendChild(td);
+                        }
+                    }
+                    tbody.appendChild(tr);
+                }
+
+                table.appendChild(tbody);
+                container.appendChild(table);
+
+                if (i + (rowsPerTable * colsPerRow) < data.length) {
+                    const pageBreak = document.createElement('div');
+                    pageBreak.style.pageBreakAfter = 'always';
+                    container.appendChild(pageBreak);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
